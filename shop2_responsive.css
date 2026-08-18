@@ -1,0 +1,65 @@
+@media (max-width: 991px) {
+    .header-middle, .navbar.py-3.position-relative {
+        display: none !important;
+    }
+    
+    .top-bar .d-lg-flex {
+        display: none !important;
+    }
+
+    .top-bar .container {
+        justify-content: center !important;
+    }
+
+    #mobileMenu.offcanvas-start {
+        width: 75vw !important;
+    }
+
+    .sale-month-banner {
+        padding: 2rem !important;
+        background-position: left; 
+    }
+    .sale-month-banner .w-50 {
+        width: 100% !important; 
+        text-align: center;
+    }
+    .badge-circle {
+        display: none !important; 
+    }
+    .sale-month-banner table {
+        margin: 0 auto; 
+    }
+
+    .shop2-section > .container > table:first-of-type td {
+        display: block;
+        width: 100%;
+        text-align: left !important;
+        padding-bottom: 0.5rem;
+    }
+    .shop2-section > .container > table:first-of-type table {
+        width: 100%;
+    }
+
+    .shop2-section > .container > table:nth-of-type(2) td {
+         display: block;
+         width: 100%;
+         text-align: left !important;
+         padding-bottom: 1rem;
+    }
+
+    #product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-card .p-4 {
+        padding: 1.5rem !important;
+    }
+
+    .newsletter-banner .row {
+        text-align: center;
+    }
+    .newsletter-banner .col-lg-2 {
+        display: flex;
+        justify-content: center;
+    }
+}

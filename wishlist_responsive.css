@@ -1,0 +1,108 @@
+@media (max-width: 991px) {
+    
+    .header-middle {
+        display: none !important;
+    }
+    
+
+    .top-bar .d-lg-flex {
+        display: none !important;
+    }
+
+    .top-bar .container {
+        justify-content: center !important;
+    }
+
+
+    #mobileMenu.offcanvas-start {
+        width: 75vw !important;
+    }
+
+    .newsletter-banner .row {
+        text-align: center;
+    }
+    .newsletter-banner .col-lg-3 {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .py-5 > .container > table {
+        min-width: 100% !important;
+        border: none !important;
+    }
+
+
+    .py-5 > .container > table > thead {
+        display: none !important;
+    }
+
+
+    .py-5 > .container > table > tbody,
+    .py-5 > .container > table > tfoot {
+        display: block;
+        width: 100%;
+    }
+
+    #wishlist-container > tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border: 1px solid #E6E6E6 !important;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+
+    #wishlist-container > tr > td {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+        border: none !important;
+        padding: 0.5rem 0 !important;
+    }
+
+  
+    #wishlist-container table,
+    #wishlist-container tbody,
+    #wishlist-container tr td table tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #wishlist-container td.ps-3 {
+        padding-left: 0 !important;
+        margin-top: 12px;
+        font-size: 1.2rem;
+    }
+
+    #wishlist-container td.pe-3 {
+        padding-right: 0 !important;
+        margin-bottom: 15px;
+    }
+
+    #wishlist-container .btn-success {
+        width: 100%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .py-5 > .container > table > tfoot > tr {
+        display: block;
+        border: none !important;
+    }
+    .py-5 > .container > table > tfoot td {
+        border: none !important;
+        text-align: center;
+        padding-top: 1rem;
+    }
+    .py-5 > .container > table > tfoot table {
+        margin: 0 auto;
+    }
+}

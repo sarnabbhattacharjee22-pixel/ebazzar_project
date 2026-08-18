@@ -1,0 +1,87 @@
+@media (max-width: 991px) {
+    #mobileMenu.offcanvas-start {
+        width: 75vw !important;
+    }
+
+    .hero-section .display-3 {
+        font-size: 2.5rem; 
+    }
+    .hero-section .min-vh-50 {
+        min-height: auto;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .hero-section .col-lg-5 {
+        margin-top: 2rem;
+        text-align: center; 
+    }
+    
+    .hero-float, .cat-float, .store-float, .promo-float {
+        display: none !important; 
+    }
+
+    .store-section table td {
+        display: block;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .store-section table td:nth-child(2) {
+        height: 20px; 
+    }
+    
+    .store-section .col-lg-6.ps-lg-4 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    .store-section .d-flex {
+        text-align: left;
+    }
+
+    .testimonial-set {
+        flex-direction: column;
+    }
+    .testimonial-set > div {
+        width: 100% !important; 
+    }
+
+    .category-set .row {
+        justify-content: center;
+    }
+}
+
+/* ============================================== */
+    /* 5. NEWSLETTER POPUP MOBILE  */
+    /* ============================================== */
+
+    #newsletter-modal table, 
+    #newsletter-modal tbody, 
+    #newsletter-modal tr, 
+    #newsletter-modal td {
+        display: block;
+        width: 100% !important;
+    }
+    
+    #newsletter-modal img[alt="Newsletter"] {
+        display: none; 
+    }
+    
+    #newsletter-modal .p-5 {
+        padding: 2rem 1.5rem !important; 
+    }
+    #newsletter-modal h2 {
+        font-size: 1.8rem; 
+    }
+
+    .newsletter-capsule {
+        padding: 3px;
+    }
+    .newsletter-capsule input {
+        padding-left: 12px;
+        font-size: 0.9rem;
+    }
+    .newsletter-capsule button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }

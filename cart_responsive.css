@@ -1,0 +1,99 @@
+@media (max-width: 991px) {
+    .header-middle, .navbar {
+        display: none !important;
+    }
+    
+    .top-bar .d-lg-flex {
+        display: none !important;
+    }
+    
+    .top-bar .container {
+        justify-content: center !important;
+    }
+
+    #mobileMenu.offcanvas-start {
+        width: 75vw !important;
+    }
+
+    .newsletter-banner .row {
+        text-align: center;
+    }
+    .newsletter-banner .col-lg-2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cart-table-responsive table {
+        min-width: 100% !important;
+        border: none !important;
+    }
+
+    .cart-table-responsive thead {
+        display: none !important;
+    }
+
+    .cart-table-responsive tbody,
+    .cart-table-responsive tfoot {
+        display: block;
+        width: 100%;
+    }
+
+    #cart-container > tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border: 1px solid #E6E6E6 !important;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        background-color: #fff;
+    }
+
+
+    #cart-container > tr > td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100% !important;
+        border: none !important;
+        padding: 0.5rem 0 !important;
+    }
+
+    #cart-container > tr > td:first-child {
+        justify-content: flex-start;
+    }
+    
+    #cart-container > tr > td:first-child table {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    #cart-container td[align="center"] {
+        justify-content: center !important;
+    }
+
+    #cart-container td span.fw-bold {
+        font-size: 1.1rem;
+    }
+
+    .cart-table-responsive tfoot td {
+        padding: 0 !important;
+    }
+    .cart-table-responsive tfoot table tr {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cart-table-responsive tfoot table td {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .cart-table-responsive tfoot a,
+    .cart-table-responsive tfoot button {
+        width: 100%;
+    }
+}

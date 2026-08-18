@@ -1,0 +1,54 @@
+@media (max-width: 991px) {
+    #mobileMenu.offcanvas-start {
+        width: 75vw !important;
+    }
+    
+    .header-middle {
+        display: none !important;
+    }
+    
+    .top-bar .d-lg-flex {
+        display: none !important;
+    }
+
+    .top-bar .container {
+        justify-content: center !important;
+    }
+
+    .col-lg-3.pe-lg-4 {
+        margin-bottom: 3rem; 
+    }
+
+    .btn-success.rounded-pill.fw-bold.px-4.mb-4 {
+        width: 100%;
+    }
+
+    .col-lg-9 table:first-of-type tr {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 1rem;
+    }
+    .col-lg-9 table:first-of-type td {
+        width: 100%;
+        text-align: left !important;
+    }
+
+    #product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .product-card .p-4 {
+        padding: 1.5rem !important;
+    }
+    
+    .newsletter-banner .row {
+        text-align: center;
+    }
+    .newsletter-banner .col-lg-2 {
+        display: flex;
+        justify-content: center;
+    }
+}

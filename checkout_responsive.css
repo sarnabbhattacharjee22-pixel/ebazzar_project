@@ -1,0 +1,28 @@
+@media (max-width: 991px) {
+    .header-middle, .navbar.py-3.position-relative { 
+        display: none !important; 
+    }
+
+    .top-bar .d-lg-flex { 
+        display: none !important; 
+    }
+    .top-bar .container { 
+        justify-content: center !important; 
+    }
+
+    #mobileMenu.offcanvas-start { 
+        width: 75vw !important; 
+    }
+
+    .newsletter-banner .row { 
+        text-align: center; 
+    }
+    .newsletter-banner .col-lg-3 { 
+        display: flex; 
+        justify-content: center; 
+    }
+
+    .col-lg-8.mb-5.mb-lg-0 {
+        margin-bottom: 3rem !important;
+    }
+}

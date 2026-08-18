@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecobazar - Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="checkout_style.css">
+    <link rel="stylesheet" href="checkout_responsive.css"> 
+</head>
+<body class="bg-white">
+
+ <!-- ============================================== -->
+    <!-- TOP BAR -->
+    <!-- ============================================== -->
+    <div class="top-bar py-2 border-bottom" style="background-color: #333333;">
+        <div class="container d-flex justify-content-center justify-content-lg-between align-items-center font-sm text-white-50">
+            <span class="d-none d-lg-flex align-items-center gap-1">
+                <img src="assets/icon-gps.png" alt="Location" width="14" style="filter: brightness(0) invert(1); opacity: 0.7;"> Store Location: Lincoln- 344, Illinois, Chicago, USA
+            </span>
+            <div class="d-flex gap-3 text-white-50">
+                <div class="dropdown"><span class="dropdown-toggle cursor-pointer" role="button" data-bs-toggle="dropdown">Eng</span><ul class="dropdown-menu shadow-sm border-0 mt-2 font-sm"><li><a class="dropdown-item" href="#">Eng</a></li></ul></div>
+                <div class="dropdown"><span class="dropdown-toggle cursor-pointer" role="button" data-bs-toggle="dropdown">USD</span><ul class="dropdown-menu shadow-sm border-0 mt-2 font-sm"><li><a class="dropdown-item" href="#">USD</a></li></ul></div>
+                <span>|</span><span class="cursor-pointer">Sign In / Sign Up</span>
+            </div>
+        </div>
+    </div>
+
+<!-- ============================================== -->
+    <!-- DESKTOP HEADER -->
+    <!-- ============================================== -->
+    <div class="d-none d-lg-block">
+        <div id="dynamic-header-wrapper" class="bg-white position-relative z-3 shadow-sm">
+            <div class="header-middle py-4 bg-white border-bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Left: Logo -->
+                        <div class="col-lg-3">
+                            <a href="index.html"><img src="assets/logo.png" alt="Ecobazar" height="40"></a>
+                        </div>
+                        
+                        <!-- Center: Search Bar  -->
+                        <div class="col-lg-6">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="border border-light-subtle rounded bg-white overflow-hidden hover-border-green shadow-sm" style="border-collapse: separate; padding: 4px;">
+                                <tr>
+                                    <td width="45" align="center" valign="middle" class="ps-3">
+                                        <img src="assets/searchicon.png" width="20" alt="Search">
+                                    </td>
+                                    <td align="left" valign="middle">
+                                        <input type="text" placeholder="Search" class="form-control border-0 shadow-none w-100 font-sm bg-transparent" style="outline: none; padding-left: 5px;">
+                                    </td>
+                                    <td width="110" align="right" valign="middle" class="pe-1">
+                                        <button class="btn btn-success border-0 rounded fw-bold w-100 font-sm text-white shadow-none" style="padding-top: 10px; padding-bottom: 10px;">Search</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- Right: Icons -->
+                        <div class="col-lg-3">
+                            <table border="0" cellpadding="0" cellspacing="0" align="right">
+                                <tr>
+                                    <td align="center" valign="middle" class="px-2 cursor-pointer position-relative" onclick="window.location.href='wishlist.html'">
+                                        <img src="assets/wishlist.png" width="26" alt="Wishlist">
+                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success wishlist-badge">0</span>
+                                    </td>
+                                    <td width="1" bgcolor="#E6E6E6" height="30" class="mx-2"></td>
+                                    <td align="center" valign="middle" class="px-2 cursor-pointer position-relative" onclick="openCart()">
+                                        <img src="assets/Cart.png" width="26" alt="Cart">
+                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success cart-badge">0</span>
+                                    </td>
+                                    <td align="left" valign="middle" class="ps-2 cursor-pointer" onclick="openCart()">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr><td class="font-sm text-muted lh-1 pt-1" style="font-size: 11px;">Shopping cart:</td></tr>
+                                            <tr><td class="fw-bold text-dark lh-1 pb-1 header-cart-total font-sm">$0.00</td></tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM NAVIGATION: Links & Phone -->
+            <nav class="navbar navbar-expand-lg bg-white py-3">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <ul class="navbar-nav fw-medium gap-3 flex-row">
+                        <li class="nav-item dropdown"><a class="nav-link text-muted px-0" href="#" role="button" data-bs-toggle="dropdown">Home <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="index.html">Home 1</a></li></ul></li>
+                        <li class="nav-item dropdown"><a class="nav-link text-muted px-0" href="#" role="button" data-bs-toggle="dropdown">Shop <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="shop1.html">Vegetables</a></li><li><a class="dropdown-item" href="shop2.html">Fresh Fruit</a></li></ul></li>
+                        <li class="nav-item dropdown"><a class="nav-link text-success fw-bold px-0" href="#" role="button" data-bs-toggle="dropdown">Pages <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="cart.html">Shopping Cart</a></li><li><a class="dropdown-item text-success fw-bold" href="checkout.html">Checkout</a></li><li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li></ul></li>
+                        <li class="nav-item dropdown"><a class="nav-link text-muted px-0" href="#" role="button" data-bs-toggle="dropdown">Blog <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="#">Blog Grid</a></li></ul></li>
+                        <li class="nav-item"><a class="nav-link text-muted px-0" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link text-muted px-0" href="#">Contact Us</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2 z-1">
+                        <span class="fw-medium text-dark d-flex align-items-center"><img src="assets/teli_phone.png" height="20" class="me-2" alt="Phone">(219) 555-0114</span>
+                    </div>
+                </div>
+            </nav>
+            
+        </div>
+    </div>
+
+            <!-- Active Search Header  -->
+            <div id="header-layout-search" class="d-none">
+                <div class="header-middle py-4 bg-white border-bottom">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3"><a href="index.html"><img src="assets/logo.png" alt="Ecobazar" height="40"></a></div>
+                            <div class="col-lg-6">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="border border-light-subtle rounded bg-white overflow-hidden hover-border-green shadow-sm" style="border-collapse: separate; padding: 4px;">
+                                    <tr>
+                                        <td width="45" align="center" valign="middle" class="ps-3 cursor-pointer" onclick="toggleHeaderLayout()"><img src="assets/searchicon.png" width="20" alt="Search"></td>
+                                        <td align="left" valign="middle"><input type="text" placeholder="Search" class="form-control border-0 shadow-none w-100 font-sm bg-transparent" autofocus style="outline: none; padding-left: 5px;"></td>
+                                        <td width="110" align="right" valign="middle" class="pe-1"><button class="btn btn-success border-0 rounded fw-bold w-100 font-sm text-white shadow-none" style="padding-top: 10px; padding-bottom: 10px;">Search</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-lg-3">
+                                <table border="0" cellpadding="0" cellspacing="0" align="right">
+                                    <tr>
+                                        <td align="center" valign="middle" class="px-2 cursor-pointer position-relative" onclick="window.location.href='wishlist.html'"><img src="assets/wishlist.png" width="26" alt="Wishlist"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success wishlist-badge">0</span></td>
+                                        <td width="1" bgcolor="#E6E6E6" height="30" class="mx-2"></td>
+                                        <td align="center" valign="middle" class="px-2 cursor-pointer position-relative" onclick="openCart()"><img src="assets/Cart.png" width="26" alt="Cart"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success cart-badge">0</span></td>
+                                        <td align="left" valign="middle" class="ps-2 cursor-pointer" onclick="openCart()"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="font-sm text-muted lh-1 pt-1" style="font-size: 11px;">Shopping cart:</td></tr><tr><td class="fw-bold text-dark lh-1 pb-1 header-cart-total font-sm">$0.00</td></tr></table></td>
+                                        <td align="center" valign="middle" class="ps-3 cursor-pointer"><img src="assets/profile.png" width="24" alt="Profile"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white py-3">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <ul class="navbar-nav fw-medium gap-3 flex-row">
+                            <li class="nav-item dropdown"><a class="nav-link text-muted px-0" href="#" role="button" data-bs-toggle="dropdown">Home <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="index.html">Home 1</a></li></ul></li>
+                            <li class="nav-item dropdown"><a class="nav-link text-muted px-0" href="#" role="button" data-bs-toggle="dropdown">Shop <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="shop1.html">Vegetables</a></li><li><a class="dropdown-item" href="shop2.html">Fresh Fruit</a></li></ul></li>
+                            <li class="nav-item dropdown"><a class="nav-link text-success fw-bold px-0" href="#" role="button" data-bs-toggle="dropdown">Pages <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="cart.html">Shopping Cart</a></li><li><a class="dropdown-item text-success fw-bold" href="checkout.html">Checkout</a></li><li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li></ul></li>
+                            <li class="nav-item dropdown"><a class="nav-link text-muted px-0" href="#" role="button" data-bs-toggle="dropdown">Blog <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="#">Blog Grid</a></li></ul></li>
+                            <li class="nav-item"><a class="nav-link text-muted px-0" href="#">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link text-muted px-0" href="#">Contact Us</a></li>
+                        </ul>
+                        <div class="d-flex align-items-center gap-2 z-1">
+                            <span class="fw-medium text-dark d-flex align-items-center"><img src="assets/teli_phone.png" height="20" class="me-2" alt="Phone">(219) 555-0114</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MOBILE HEADER & OFFCANVAS -->
+    <!-- ============================================== -->
+    <div class="d-lg-none bg-white py-3 border-bottom shadow-sm position-relative z-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div style="width: 26px;"></div> <!-- Spacer -->
+            <a href="index.html" class="m-0"><img src="assets/logo.png" alt="Ecobazar" height="32"></a>
+            <button class="btn border-0 p-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <img src="assets/menuicon.png" width="26" alt="Menu">
+            </button>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom py-3">
+            <img src="assets/logo.png" height="32" alt="Ecobazar">
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
+        </div>
+        
+        <div class="offcanvas-body d-flex flex-column pt-4 align-items-center">
+            
+            <div class="w-100 mb-4">
+                <div class="d-flex align-items-center gap-2 cursor-pointer justify-content-center" id="mobileSearchTrigger" onclick="toggleMobileSearch()">
+                    <img src="assets/searchicon.png" width="22" alt="Search">
+                    <span class="fw-bold text-dark fs-5">Search</span>
+                </div>
+
+                <div id="mobileSearchBar" class="d-none mt-2">
+                    <div class="input-group border border-success rounded overflow-hidden">
+                        <input type="text" class="form-control border-0 shadow-none font-sm" placeholder="Search products...">
+                        <button class="btn btn-success rounded-0 px-3"><img src="assets/searchicon.png" width="16" style="filter:brightness(0) invert(1);"></button>
+                        <button class="btn btn-light rounded-0 px-3 border-start" onclick="toggleMobileSearch()"><i class="bi bi-x-lg text-dark"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="navbar-nav fw-medium gap-3 mb-4 fs-5 w-100 align-items-center text-center" id="mobileNavLinks">
+                <li class="nav-item"><a class="nav-link text-dark p-0" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-dark p-0" href="shop1.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link text-success fw-bold p-0" href="#">Pages</a></li>
+                <li class="nav-item"><a class="nav-link text-dark p-0" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-dark p-0" href="#">About Us</a></li>
+            </ul>
+
+            <div id="mobileBottomIcons" class="d-flex flex-column gap-4 border-top pt-4 mb-4 w-100 align-items-center mt-auto">
+                <div class="d-flex align-items-center gap-3 cursor-pointer" onclick="window.location.href='wishlist.html'">
+                    <div class="position-relative">
+                        <img src="assets/wishlist.png" width="26" alt="Wishlist">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success wishlist-badge" style="font-size:0.65rem;">0</span>
+                    </div>
+                    <span class="text-dark fw-medium fs-5">Wishlist</span>
+                </div>
+                
+                <div class="d-flex align-items-center gap-3 cursor-pointer" onclick="openCart(); document.querySelector('#mobileMenu .btn-close').click();">
+                    <div class="position-relative">
+                        <img src="assets/Cart.png" width="26" alt="Cart">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success cart-badge" style="font-size:0.65rem;">0</span>
+                    </div>
+                    <span class="text-dark fw-medium fs-5">Shopping Cart</span>
+                </div>
+                
+                <div class="d-flex align-items-center gap-3 cursor-pointer">
+                    <img src="assets/profile.png" width="26" alt="Profile">
+                    <span class="text-dark fw-medium fs-5">My Account</span>
+                </div>
+            </div>
+
+            <div class="mt-auto border-top pt-4 pb-2 w-100 d-flex justify-content-center">
+                <a href="tel:2195550114" class="text-decoration-none text-dark d-flex align-items-center gap-2 fw-bold fs-5">
+                    <img src="assets/teli_phone.png" height="24" alt="Phone"> (219) 555-0114
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- BREADCRUMB BANNER -->
+    <!-- ============================================== -->
+    <section class="breadcrumb-banner py-5 d-flex align-items-center mb-5" style="background: url('assets/bg-breadcrumb.jpg') center/cover no-repeat; background-color: #1A1A1A;">
+        <div class="container">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="left" valign="middle"><a href="index.html"><img src="assets/icon-home-white.png" height="18" alt="Home" style="opacity: 0.7;"></a></td>
+                    <td align="center" valign="middle" class="px-3"><img src="assets/icon-arrow-right-white.png" height="10" alt=">" style="opacity: 0.5;"></td>
+                    <td align="left" valign="middle" class="text-white-50 font-sm">Shopping Cart</td>
+                    <td align="center" valign="middle" class="px-3"><img src="assets/icon-arrow-right-white.png" height="10" alt=">" style="opacity: 0.5;"></td>
+                    <td align="left" valign="middle" class="text-success fw-bold font-sm">Checkout</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- CHECKOUT AREA -->
+    <!-- ============================================== -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row gx-5">
+                
+                <!-- LEFT COLUMN: Billing Information -->
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <h4 class="fw-bold text-dark mb-4">Billing Information</h4>
+                    
+                    <form id="billing-form">
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-4">
+                                <label class="form-label font-sm text-dark">First name</label>
+                                <input type="text" class="form-control border-light-subtle shadow-none py-2 font-sm text-muted" placeholder="Your first name" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label font-sm text-dark">Last name</label>
+                                <input type="text" class="form-control border-light-subtle shadow-none py-2 font-sm text-muted" placeholder="Your last name" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label font-sm text-dark">Company Name <span class="text-muted">(optional)</span></label>
+                                <input type="text" class="form-control border-light-subtle shadow-none py-2 font-sm text-muted" placeholder="Company name">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label font-sm text-dark">Street Address</label>
+                            <input type="text" class="form-control border-light-subtle shadow-none py-2 font-sm text-muted" placeholder="Street Address" required>
+                        </div>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-4">
+                                <label class="form-label font-sm text-dark">Country / Region</label>
+                                <select class="form-select border-light-subtle shadow-none py-2 font-sm text-muted" required>
+                                    <option value="">Select</option>
+                                    <option value="US">United States</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label font-sm text-dark">States</label>
+                                <select class="form-select border-light-subtle shadow-none py-2 font-sm text-muted" required>
+                                    <option value="">Selects</option>
+                                    <option value="IL">Illinois</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label font-sm text-dark">Zip Code</label>
+                                <input type="text" class="form-control border-light-subtle shadow-none py-2 font-sm text-muted" placeholder="Zip Code" required>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label font-sm text-dark">Email</label>
+                                <input type="email" class="form-control border-light-subtle shadow-none py-2 font-sm text-muted" placeholder="Email Address" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label font-sm text-dark">Phone</label>
+                                <input type="text" class="form-control border-light-subtle shadow-none py-2 font-sm text-muted" placeholder="Phone number" required>
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-5">
+                            <input class="form-check-input shadow-none rounded-0 border-light-subtle" type="checkbox" id="shipCheck">
+                            <label class="form-check-label font-sm text-muted" for="shipCheck">
+                                Ship to a different address
+                            </label>
+                        </div>
+
+                        <h4 class="fw-bold text-dark mb-4 border-top pt-4">Additional Info</h4>
+                        <div class="mb-4">
+                            <label class="form-label font-sm text-dark">Order Notes (Optional)</label>
+                            <textarea class="form-control border-light-subtle shadow-none font-sm text-muted bg-white no-resize" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- RIGHT COLUMN: Order Summary -->
+                <div class="col-lg-4">
+                    <div class="card border border-light-subtle rounded p-4 bg-white shadow-none">
+                        <h5 class="fw-bold text-dark mb-4">Order Summary</h5>
+                        <div id="checkout-order-list" class="mb-4">
+                        </div>
+
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mb-4">
+                            <tr><td align="left" valign="middle" class="font-sm text-dark border-bottom py-3">Subtotal:</td><td align="right" valign="middle" class="font-sm text-dark fw-bold border-bottom py-3" id="checkout-subtotal">$0.00</td></tr>
+                            <tr><td align="left" valign="middle" class="font-sm text-dark border-bottom py-3">Shipping:</td><td align="right" valign="middle" class="font-sm text-dark fw-bold border-bottom py-3">Free</td></tr>
+                            <tr><td align="left" valign="middle" class="text-dark pt-4 fs-5">Total:</td><td align="right" valign="middle" class="text-dark fw-bold pt-4 fs-5" id="checkout-total">$0.00</td></tr>
+                        </table>
+
+                        <h5 class="fw-bold text-dark mb-3 mt-2">Payment Method</h5>
+                        
+                        <div class="custom-radio">
+                            <input type="radio" name="paymentMethod" id="pay1" checked>
+                            <label for="pay1">Cash on Delivery</label>
+                        </div>
+                        <div class="custom-radio">
+                            <input type="radio" name="paymentMethod" id="pay2">
+                            <label for="pay2">Paypal</label>
+                        </div>
+                        <div class="custom-radio mb-4">
+                            <input type="radio" name="paymentMethod" id="pay3">
+                            <label for="pay3">Amazon Pay</label>
+                        </div>
+
+                        <button id="place-order-btn" class="btn btn-success rounded-pill fw-bold w-100 py-3 fs-6 border-0 shadow-none">Place Order</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER BANNER -->
+    <section class="newsletter-banner py-5 bg-light border-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <h4 class="fw-bold mb-1 text-dark">Subcribe our Newsletter</h4>
+                    <p class="text-muted font-sm mb-0 lh-base">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+                </div>
+                <div class="col-lg-5 mt-3 mt-lg-0">
+                    <!-- Capsule Newsletter -->
+                    <div class="newsletter-capsule shadow-sm">
+                        <input type="email" placeholder="Your email address" class="text-muted font-sm">
+                        <button class="btn btn-success fw-bold">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-lg-2 text-lg-end text-center mt-4 mt-lg-0">
+                    <table border="0" cellpadding="0" cellspacing="0" align="right">
+                        <tr>
+                            <td class="px-1"><a href="#" class="social-share-btn"><img src="assets/icon-facebook.png" class="social-img" alt="Facebook" style="filter: brightness(0); opacity: 0.8;"></a></td>
+                            <td class="px-1"><a href="#" class="social-share-btn"><img src="assets/icon-twitter.png" class="social-img" alt="Twitter" style="filter: brightness(0); opacity: 0.8;"></a></td>
+                            <td class="px-1"><a href="#" class="social-share-btn"><img src="assets/icon-pinterest.png" class="social-img" alt="Pinterest" style="filter: brightness(0); opacity: 0.8;"></a></td>
+                            <td class="px-1"><a href="#" class="social-share-btn"><img src="assets/icon-instagram.png" class="social-img" alt="Instagram" style="filter: brightness(0); opacity: 0.8;"></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- DARK FOOTER -->
+    <!-- ============================================== -->
+    <footer class="footer-section pt-5 pb-3" style="background-color: #1A1A1A;">
+        <div class="container pt-4">
+            <div class="row g-4 mb-3">
+                <div class="col-lg-4 pe-lg-5">
+                    <img src="assets/logo-white.png" width="140" class="mb-4" alt="Ecobazar">
+                    <p class="text-white-50 font-sm mb-4 lh-lg">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
+                    
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="left" valign="middle">
+                                <a href="tel:2195550114" class="text-white text-decoration-none fw-medium pb-1" style="border-bottom: 2px solid #00B207;">(219) 555-0114</a>
+                            </td>
+                            <td align="center" valign="middle" class="text-white-50 px-3 font-sm">or</td>
+                            <td align="left" valign="middle">
+                                <a href="mailto:Proxy@gmail.com" class="text-white text-decoration-none fw-medium pb-1" style="border-bottom: 2px solid #00B207;">Proxy@gmail.com</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-medium mb-4">My Account</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">My Account</a></li>
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Order History</a></li>
+                        <li class="mb-3"><a href="cart.html" class="text-white-50 text-decoration-none font-sm hover-success">Shopping Cart</a></li>
+                        <li class="mb-0"><a href="wishlist.html" class="text-white-50 text-decoration-none font-sm hover-success">Wishlist</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-medium mb-4">Helps</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Contact</a></li>
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Faqs</a></li>
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Terms & Condition</a></li>
+                        <li class="mb-0"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-medium mb-4">Proxy</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">About</a></li>
+                        <li class="mb-3"><a href="shop1.html" class="text-white-50 text-decoration-none font-sm hover-success">Shop</a></li>
+                        <li class="mb-3"><a href="product1.html" class="text-white-50 text-decoration-none font-sm hover-success">Product</a></li>
+                        <li class="mb-0"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-medium mb-4">Categories</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Fruit & Vegetables</a></li>
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Meat & Fish</a></li>
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Bread & Bakery</a></li>
+                        <li class="mb-0"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Beauty & Health</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-4 mb-4">
+                <tr><td height="1" bgcolor="#333333"></td></tr>
+            </table>
+
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="left" valign="middle">
+                        <p class="text-white-50 font-sm mb-0">Ecobazar eCommerce &copy; 2021. All Rights Reserved</p>
+                    </td>
+                    <td align="right" valign="middle">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-apple.png" width="45" alt="Apple Pay"></td>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-visa.png" width="45" alt="Visa"></td>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-discover.png" width="45" alt="Discover"></td>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-mastercard.png" width="45" alt="Mastercard"></td>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-secure.png" width="60" alt="Secure Payment"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- CART SIDEBAR POPUP & SUCCESS MODAL -->
+    <!-- ============================================== -->
+    <div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+    <div id="cart-sidebar" class="cart-sidebar d-flex flex-column bg-white shadow">
+        <div class="p-4 border-bottom border-light-subtle d-flex justify-content-between align-items-center">
+            <h5 class="fw-bold m-0 text-dark">Shopping Cart (<span id="popup-cart-count">0</span>)</h5>
+            <button class="btn btn-light rounded-circle bg-transparent border-0 p-1 fs-5 shadow-none" onclick="closeCart()"><i class="bi bi-x"></i></button>
+        </div>
+        <div id="popup-cart-list" class="p-4 flex-grow-1 overflow-auto"></div>
+        <div class="p-4 bg-white border-top">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mb-4">
+                <tr>
+                    <td align="left" valign="middle" class="font-sm text-dark">Total:</td>
+                    <td align="right" valign="middle" class="fw-bold text-dark fs-5" id="popup-cart-total">$0.00</td>
+                </tr>
+            </table>
+            <a href="checkout.html" class="btn btn-success rounded-pill fw-bold w-100 py-3 mb-3 d-block text-center text-decoration-none border-0 shadow-none">Checkout</a>
+            <a href="cart.html" class="btn btn-light bg-success-light text-success rounded-pill fw-bold w-100 py-3 shadow-none d-block text-center text-decoration-none border-0">Go To Cart</a>
+        </div>
+    </div>
+    <div id="order-success-modal" class="success-modal-overlay">
+        <div class="success-modal-content">
+            <i class="bi bi-check-circle-fill text-success mb-3 d-block" style="font-size: 4rem;"></i>
+            <h3 class="fw-bold text-dark mb-3">Order Placed Successfully!</h3>
+            <p class="text-muted font-sm lh-lg mb-4">Thank you for your purchase. We are processing your order and you will be redirected to the homepage shortly.</p>
+            <p class="text-dark fw-bold mb-0">Redirecting in <span id="countdown-timer" class="text-success fs-5">8</span> seconds...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="ecommerce_app.js"></script> 
+    <script src="checkout_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecobazar - Fresh & Healthy Organic Food</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index_responsive.css">
+</head>
+<body class="bg-white">
+    <div id="newsletter-modal" class="popup-overlay align-items-center justify-content-center">
+        <div class="bg-white rounded-4 shadow-lg position-relative d-flex p-2" style="max-width: 850px; width: 90%;">
+            <button class="btn border-0 position-absolute top-0 end-0 m-3 fs-5 z-3 text-muted shadow-none p-0" style="line-height: 1;" onclick="closePopup()">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="45%" align="left" valign="stretch">
+                        <img src="assets/popup-bg.jpg" class="img-fluid rounded-3 h-100" style="object-fit: cover;" alt="Newsletter">
+                    </td>
+                    <td width="55%" align="center" valign="middle" class="p-5 text-center">
+                        <h2 class="fw-bold mb-3 text-dark display-6">Subcribe to Our<br>Newsletter</h2>
+                        <p class="text-muted font-sm mb-4 lh-lg">Subscribe to our newsletter and Save your <span class="text-warning fw-bold">20% money</span> with discount code today.</p>
+                        <div class="newsletter-capsule mb-4 mx-auto shadow-sm" style="max-width: 400px;">
+                            <input type="email" placeholder="Enter your email" class="text-muted font-sm">
+                            <button class="btn btn-success fw-bold px-4">Subscribe</button>
+                        </div>
+                        
+                        <label class="font-sm text-muted cursor-pointer d-flex align-items-center justify-content-center gap-2">
+                            <input type="checkbox" class="form-check-input shadow-none m-0 border-secondary"> Do not show this window
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+<!-- ============================================== -->
+    <!-- TOP BAR -->
+    <!-- ============================================== -->
+    <div class="top-bar py-2 text-muted border-bottom">
+        <div class="container d-flex justify-content-center justify-content-lg-between align-items-center font-sm">
+            <!-- Hidden on mobile, visible on desktop -->
+            <span class="d-none d-lg-flex align-items-center gap-1">
+                <img src="assets/icon-gps.png" alt="Location" width="14"> Store Location: Lincoln- 344, Illinois, Chicago, USA
+            </span>
+            
+            <div class="d-flex gap-3">
+                <div class="dropdown"><span class="dropdown-toggle cursor-pointer" role="button" data-bs-toggle="dropdown">Eng </span><ul class="dropdown-menu shadow-sm border-0 mt-2 font-sm"><li><a class="dropdown-item" href="#">Eng</a></li></ul></div>
+                <div class="dropdown"><span class="dropdown-toggle cursor-pointer" role="button" data-bs-toggle="dropdown">USD </span><ul class="dropdown-menu shadow-sm border-0 mt-2 font-sm"><li><a class="dropdown-item" href="#">USD</a></li></ul></div>
+                <span>|</span><span class="cursor-pointer">Sign In / Sign Up</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- DESKTOP HEADER -->
+    <!-- ============================================== -->
+    <div class="d-none d-lg-block">
+        <div id="dynamic-header-wrapper" class="bg-white position-relative z-3 shadow-sm">
+            
+            <!-- LAYOUT 1: DEFAULT -->
+            <nav id="header-layout-default" class="navbar navbar-expand-lg py-3 d-block">
+                <div class="container d-flex justify-content-between align-items-center position-relative">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav fw-medium gap-3">
+                            <li class="nav-item dropdown"><a class="nav-link text-success fw-bold" href="#" role="button" data-bs-toggle="dropdown">Home <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item text-success fw-bold" href="index.html">Home 1</a></li></ul></li>
+                            <li class="nav-item dropdown"><a class="nav-link text-muted" href="#" role="button" data-bs-toggle="dropdown">Shop <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="shop1.html">Vegetables</a></li><li><a class="dropdown-item" href="shop2.html">Fresh Fruit</a></li></ul></li>
+                            <li class="nav-item dropdown"><a class="nav-link text-muted" href="#" role="button" data-bs-toggle="dropdown">Pages <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="cart.html">Shopping Cart</a></li><li><a class="dropdown-item" href="checkout.html">Checkout</a></li><li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li></ul></li>
+                            <li class="nav-item dropdown"><a class="nav-link text-muted" href="#" role="button" data-bs-toggle="dropdown">Blog <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="#">Blog Grid</a></li></ul></li>
+                            <li class="nav-item"><a class="nav-link text-muted" href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle m-0" href="index.html"><img src="assets/logo.png" alt="Ecobazar" height="40"></a>
+                    <div class="d-flex align-items-center gap-4 z-1">
+                        <span class="fw-medium text-dark d-flex align-items-center"><img src="assets/teli_phone.png" height="20" class="me-2" alt="Phone">(219) 555-0114</span>
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td align="center" valign="middle" class="px-2 cursor-pointer" onclick="toggleHeaderLayout()"><img src="assets/searchicon.png" width="22" alt="Search"></td>
+                                <td align="center" valign="middle" class="px-2 cursor-pointer position-relative" onclick="window.location.href='wishlist.html'"><img src="assets/wishlist.png" width="24" alt="Wishlist"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success wishlist-badge">0</span></td>
+                                <td align="center" valign="middle" class="px-2 cursor-pointer position-relative" onclick="openCart()"><img src="assets/Cart.png" width="24" alt="Cart"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success cart-badge">0</span></td>
+                                <td align="center" valign="middle" class="ps-2 cursor-pointer"><img src="assets/profile.png" width="24" alt="Profile"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- LAYOUT 2: SEARCH ACTIVE -->
+            <div id="header-layout-search" class="d-none">
+                <div class="header-middle py-4 bg-white border-bottom">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3"><a href="index.html"><img src="assets/logo.png" alt="Ecobazar" height="40"></a></div>
+                            <div class="col-lg-6">
+                                <table width="100%" border="1" bordercolor="#00B207" cellpadding="0" cellspacing="0" class="rounded overflow-hidden bg-white">
+                                    <tr>
+                                        <td width="45" align="center" valign="middle" class="ps-2 cursor-pointer" onclick="toggleHeaderLayout()"><img src="assets/searchicon.png" width="20" alt="Search"></td>
+                                        <td align="left" valign="middle"><input type="text" placeholder="Search" class="form-control border-0 shadow-none w-100 font-sm bg-transparent" autofocus></td>
+                                        <td width="110" align="right" valign="middle" bgcolor="#00B207"><button class="btn btn-success border-0 rounded-0 fw-bold w-100 py-2 font-sm text-white shadow-none">Search</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-lg-3">
+                                <table border="0" cellpadding="0" cellspacing="0" align="right">
+                                    <tr>
+                                        <td align="center" valign="middle" class="px-2 cursor-pointer position-relative" onclick="window.location.href='wishlist.html'"><img src="assets/wishlist.png" width="26" alt="Wishlist"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success wishlist-badge">0</span></td>
+                                        <td width="1" bgcolor="#E6E6E6" height="30" class="mx-2"></td>
+                                        <td align="center" valign="middle" class="px-2 cursor-pointer position-relative" onclick="openCart()"><img src="assets/Cart.png" width="26" alt="Cart"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success cart-badge">0</span></td>
+                                        <td align="left" valign="middle" class="ps-2 cursor-pointer" onclick="openCart()"><table border="0" cellpadding="0" cellspacing="0"><tr><td class="font-sm text-muted lh-1 pt-1" style="font-size: 11px;">Shopping cart:</td></tr><tr><td class="fw-bold text-dark lh-1 pb-1 header-cart-total font-sm">$0.00</td></tr></table></td>
+                                        <td align="center" valign="middle" class="ps-3 cursor-pointer"><img src="assets/profile.png" width="24" alt="Profile"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white py-3">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <ul class="navbar-nav fw-medium gap-3 flex-row">
+                            <li class="nav-item dropdown"><a class="nav-link text-success fw-bold px-0" href="#" role="button" data-bs-toggle="dropdown">Home <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item text-success fw-bold" href="index.html">Home 1</a></li></ul></li>
+                            <li class="nav-item dropdown"><a class="nav-link text-muted px-0" href="#" role="button" data-bs-toggle="dropdown">Shop <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="shop1.html">Vegetables</a></li><li><a class="dropdown-item" href="shop2.html">Fresh Fruit</a></li></ul></li>
+                            <li class="nav-item dropdown"><a class="nav-link text-muted px-0" href="#" role="button" data-bs-toggle="dropdown">Pages <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="cart.html">Shopping Cart</a></li><li><a class="dropdown-item" href="checkout.html">Checkout</a></li><li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li></ul></li>
+                            <li class="nav-item dropdown"><a class="nav-link text-muted px-0" href="#" role="button" data-bs-toggle="dropdown">Blog <img src="assets/smalldownarrow.png" width="10" class="ms-1" alt="v"></a><ul class="dropdown-menu shadow-sm border-0 mt-2"><li><a class="dropdown-item" href="#">Blog Grid</a></li></ul></li>
+                            <li class="nav-item"><a class="nav-link text-muted px-0" href="#">About Us</a></li>
+                        </ul>
+                        <div class="d-flex align-items-center gap-2 z-1">
+                            <span class="fw-medium text-dark d-flex align-items-center"><img src="assets/teli_phone.png" height="20" class="me-2" alt="Phone">(219) 555-0114</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MOBILE HEADER  -->
+    <!-- ============================================== -->
+    <div class="d-lg-none bg-white py-3 border-bottom shadow-sm position-relative z-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div style="width: 26px;"></div> <!-- Spacer -->
+            <a href="index.html" class="m-0"><img src="assets/logo.png" alt="Ecobazar" height="32"></a>
+            <button class="btn border-0 p-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                <img src="assets/menuicon.png" width="26" alt="Menu">
+            </button>
+        </div>
+    </div>
+
+<!-- ============================================== -->
+    <!-- MOBILE OFFCANVAS MENU  -->
+    <!-- ============================================== -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom py-3">
+            <img src="assets/logo.png" height="32" alt="Ecobazar">
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
+        </div>
+        
+        <div class="offcanvas-body d-flex flex-column pt-4 align-items-center">
+            
+            <!-- Search Area -->
+            <div class="w-100 mb-4">
+                <div class="d-flex align-items-center gap-2 cursor-pointer justify-content-center" id="mobileSearchTrigger" onclick="toggleMobileSearch()">
+                    <img src="assets/searchicon.png" width="22" alt="Search">
+                    <span class="fw-bold text-dark fs-5">Search</span>
+                </div>
+
+                <div id="mobileSearchBar" class="d-none mt-2">
+                    <div class="input-group border border-success rounded overflow-hidden">
+                        <input type="text" class="form-control border-0 shadow-none font-sm" placeholder="Search products...">
+                        <button class="btn btn-success rounded-0 px-3"><img src="assets/searchicon.png" width="16" style="filter:brightness(0) invert(1);"></button>
+                        <button class="btn btn-light rounded-0 px-3 border-start" onclick="toggleMobileSearch()"><i class="bi bi-x-lg text-dark"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nav Links (Home is Bold) -->
+            <ul class="navbar-nav fw-medium gap-3 mb-4 fs-5 w-100 align-items-center text-center" id="mobileNavLinks">
+                <li class="nav-item"><a class="nav-link text-success fw-bold p-0" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-dark p-0" href="shop1.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link text-dark p-0" href="#">Pages</a></li>
+                <li class="nav-item"><a class="nav-link text-dark p-0" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-dark p-0" href="#">About Us</a></li>
+            </ul>
+
+            <!-- Dynamic Icons  -->
+            <div id="mobileBottomIcons" class="d-flex flex-column gap-4 border-top pt-4 mb-4 w-100 align-items-center">
+                <div class="d-flex align-items-center gap-3 cursor-pointer" onclick="window.location.href='wishlist.html'">
+                    <div class="position-relative">
+                        <img src="assets/wishlist.png" width="26" alt="Wishlist">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success wishlist-badge" style="font-size:0.65rem;">0</span>
+                    </div>
+                    <span class="text-dark fw-medium fs-5">Wishlist</span>
+                </div>
+                
+                <div class="d-flex align-items-center gap-3 cursor-pointer" onclick="openCart(); document.querySelector('#mobileMenu .btn-close').click();">
+                    <div class="position-relative">
+                        <img src="assets/Cart.png" width="26" alt="Cart">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success cart-badge" style="font-size:0.65rem;">0</span>
+                    </div>
+                    <span class="text-dark fw-medium fs-5">Shopping Cart</span>
+                </div>
+                
+                <div class="d-flex align-items-center gap-3 cursor-pointer">
+                    <img src="assets/profile.png" width="26" alt="Profile">
+                    <span class="text-dark fw-medium fs-5">My Account</span>
+                </div>
+            </div>
+
+            <!-- Phone  -->
+            <div class="mt-auto border-top pt-4 pb-2 w-100 d-flex justify-content-center">
+                <a href="tel:2195550114" class="text-decoration-none text-dark d-flex align-items-center gap-2 fw-bold fs-5">
+                    <img src="assets/teli_phone.png" height="24" alt="Phone"> (219) 555-0114
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section position-relative overflow-hidden">
+        <img src="assets/leaf-top-left.png" class="hero-float float-leaf-tl" alt="">
+        <img src="assets/outline-chili.png" class="hero-float float-chili-ml" alt="">
+        <img src="assets/outline-peas.png" class="hero-float float-peas-bl" alt="">
+        <img src="assets/leaf-mid-left.png" class="hero-float float-leaf-ml" alt="">
+        <img src="assets/outline-garlic.png" class="hero-float float-garlic-tc" alt="">
+        <img src="assets/outline-onion.png" class="hero-float float-onion-tr" alt="">
+        <img src="assets/leaf-top-right.png" class="hero-float float-leaf-tr" alt="">
+        <img src="assets/leaf-bottom-right.png" class="hero-float float-leaf-br" alt="">
+        <img src="assets/outline-leaf-right.png" class="hero-float float-outline-br" alt="">
+        
+        <div class="position-absolute top-50 translate-middle-y start-0 ms-4 z-3">
+            <button class="btn btn-white rounded-circle shadow-sm icon-btn-lg border text-muted" onclick="changeSlide('left')"><i class="bi bi-arrow-left"></i></button>
+        </div>
+        <div class="position-absolute top-50 translate-middle-y end-0 me-4 z-3">
+            <button class="btn btn-white rounded-circle shadow-sm icon-btn-lg border text-muted" onclick="changeSlide('right')"><i class="bi bi-arrow-right"></i></button>
+        </div>
+
+        <div class="container position-relative z-1">
+            <div class="row align-items-center min-vh-50 py-5">
+                <div class="col-lg-7 text-center">
+                    <img id="hero-img" src="assets/hero-basket.png" class="img-fluid" alt="Fresh Vegetables">
+                </div>
+                <div class="col-lg-5 ps-lg-5">
+                    <p class="text-success text-uppercase fw-semibold mb-2 letter-spacing-1">Welcome to Shopery</p>
+                    <h1 id="hero-title" class="display-3 fw-bold text-dark mb-3 hero-title">Fresh & Healthy<br>Organic Food</h1>
+                    <h3 class="fw-light mb-4 text-muted fs-4">Sale up to <span id="hero-discount" class="text-warning fw-bold">30% OFF</span></h3>
+                    <p id="hero-desc" class="text-muted mb-4 small">Free shipping on all your order. we deliver, you enjoy</p>
+                    <a href="shop1.html" class="btn btn-success btn-lg rounded-pill px-4 fw-medium shadow-sm">Shop now <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center pb-4 gap-2">
+                <span class="slider-dot active" onclick="changeSlide(0)"></span>
+                <span class="slider-dot" onclick="changeSlide(1)"></span>
+                <span class="slider-dot" onclick="changeSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features border-bottom py-5 bg-white">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-3"><img src="assets/icon-shipping.png" alt="Free Shipping" class="mb-3 feature-icon"><h6 class="fw-bold mb-1">Free Shipping</h6><p class="text-muted small mb-0">Free shipping with discount</p></div>
+                <div class="col-md-3"><img src="assets/icon-support.png" alt="Support" class="mb-3 feature-icon"><h6 class="fw-bold mb-1">Great Support 24/7</h6><p class="text-muted small mb-0">Instant access to Contact</p></div>
+                <div class="col-md-3"><img src="assets/icon-payment.png" alt="Payment" class="mb-3 feature-icon"><h6 class="fw-bold mb-1">100% Secure Payment</h6><p class="text-muted small mb-0">We ensure your money is safe</p></div>
+                <div class="col-md-3"><img src="assets/icon-guarantee.png" alt="Guarantee" class="mb-3 feature-icon"><h6 class="fw-bold mb-1">Money-Back Guarantee</h6><p class="text-muted small mb-0">30 days money-back</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="products py-5 position-relative bg-white">
+        <img src="assets/bg-squash.png" alt="" class="bg-decoration-squash">
+        <div class="container position-relative z-1">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold m-0">Featured Products</h2>
+                <a href="shop1.html" class="text-success text-decoration-none fw-medium">View All <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100 position-relative" onclick="window.location.href='product1.html'">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-2 py-1 z-2">Sale 50%</span>
+                        <div class="product-actions position-absolute top-0 end-0 p-3 d-flex flex-column gap-2 z-2">
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation(); addToWishlist('p1', 'Green Apple', 14.99, 'assets/product-apple.png')"><img src="assets/wishlist.png" width="16" alt="Wish"></button>
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation();"><i class="bi bi-eye"></i></button>
+                        </div>
+                        <div class="p-4 text-center"><img src="assets/product-apple.png" class="card-img-top w-75" alt="Green Apple"></div>
+                        <div class="card-body d-flex justify-content-between align-items-end">
+                            <div><p class="text-muted small mb-1">Green Apple</p><h5 class="fw-bold mb-1 text-dark">$14.99 <span class="text-muted text-decoration-line-through fs-6">$20.99</span></h5><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div></div>
+                            <button class="btn rounded-circle cart-btn shadow-none" onclick="event.stopPropagation(); addToCart('p1', 'Green Apple', 14.99, 'assets/product-apple.png')"><img src="assets/Cart.png" width="16" alt="Cart"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100 position-relative" onclick="window.location.href='product1.html'">
+                        <div class="product-actions position-absolute top-0 end-0 p-3 d-flex flex-column gap-2 z-2">
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation(); addToWishlist('p2', 'Chinese Cabbage', 14.99, 'assets/product-cabbage.png')"><img src="assets/wishlist.png" width="16" alt="Wish"></button>
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation();"><i class="bi bi-eye"></i></button>
+                        </div>
+                        <div class="p-4 text-center"><img src="assets/product-cabbage.png" class="card-img-top w-75" alt="Chinese Cabbage"></div>
+                        <div class="card-body d-flex justify-content-between align-items-end">
+                            <div><p class="text-muted small mb-1">Chinese Cabbage</p><h5 class="fw-bold mb-1 text-dark">$14.99</h5><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div></div>
+                            <button class="btn rounded-circle cart-btn shadow-none" onclick="event.stopPropagation(); addToCart('p2', 'Chinese Cabbage', 14.99, 'assets/product-cabbage.png')"><img src="assets/Cart.png" width="16" alt="Cart"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100 position-relative" onclick="window.location.href='product1.html'">
+                        <div class="product-actions position-absolute top-0 end-0 p-3 d-flex flex-column gap-2 z-2">
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation(); addToWishlist('p3', 'Green Capsicum', 14.99, 'assets/product-capsicum.png')"><img src="assets/wishlist.png" width="16" alt="Wish"></button>
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation();"><i class="bi bi-eye"></i></button>
+                        </div>
+                        <div class="p-4 text-center"><img src="assets/product-capsicum.png" class="card-img-top w-75" alt="Green Capsicum"></div>
+                        <div class="card-body d-flex justify-content-between align-items-end">
+                            <div><p class="text-muted small mb-1">Green Capsicum</p><h5 class="fw-bold mb-1 text-dark">$14.99</h5><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div></div>
+                            <button class="btn rounded-circle cart-btn shadow-none" onclick="event.stopPropagation(); addToCart('p3', 'Green Capsicum', 14.99, 'assets/product-capsicum.png')"><img src="assets/Cart.png" width="16" alt="Cart"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100 position-relative" onclick="window.location.href='product1.html'">
+                        <div class="product-actions position-absolute top-0 end-0 p-3 d-flex flex-column gap-2 z-2">
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation(); addToWishlist('p4', 'Okra', 14.99, 'assets/product-okra.png')"><img src="assets/wishlist.png" width="16" alt="Wish"></button>
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation();"><i class="bi bi-eye"></i></button>
+                        </div>
+                        <div class="p-4 text-center"><img src="assets/product-okra.png" class="card-img-top w-75" alt="Okra"></div>
+                        <div class="card-body d-flex justify-content-between align-items-end">
+                            <div><p class="text-muted small mb-1">Okra</p><h5 class="fw-bold mb-1 text-dark">$14.99</h5><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div></div>
+                            <button class="btn rounded-circle cart-btn shadow-none" onclick="event.stopPropagation(); addToCart('p4', 'Okra', 14.99, 'assets/product-okra.png')"><img src="assets/Cart.png" width="16" alt="Cart"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- ============================================== -->
+    <!-- SHOP BY TOP CATEGORIES (DYNAMIC SLIDER) -->
+    <!-- ============================================== -->
+    <section class="categories-section py-5 position-relative bg-white">
+        <img src="assets/float-cat-leaf-tl.png" class="cat-float cat-leaf-tl" alt="">
+        <img src="assets/float-cat-outline-r.png" class="cat-float cat-outline-r" alt="">
+        <img src="assets/float-cat-leaf-r.png" class="cat-float cat-leaf-r" alt="">
+
+        <div class="container position-relative z-1">
+            <div class="d-flex justify-content-between align-items-center mb-4 mt-3">
+                <h2 class="fw-bold m-0">Shop by Top Categories</h2>
+                <a href="shop2.html" class="text-success text-decoration-none fw-medium">View All <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+
+            <!-- Dynamic Arrows & Viewport -->
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-white rounded-circle shadow-sm icon-btn-lg border text-muted" onclick="slideCategories('left')"><i class="bi bi-arrow-left"></i></button>
+                
+                <div class="category-viewport flex-grow-1 px-1">
+                    <div class="category-track" id="category-track" style="transform: translateX(0);">
+                        
+                        <!-- SET 1 (Original 6) -->
+                        <div class="category-set">
+                            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3 text-center w-100 m-0">
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-veg.png" class="mx-auto mb-3" width="77" alt="Vegetables"><h6 class="fw-bold mb-1 text-dark">Vegetables</h6><p class="text-muted small mb-0">165 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-fruit.png" class="mx-auto mb-3" width="77" alt="Fresh Fruit"><h6 class="fw-bold mb-1 text-dark">Fresh Fruit</h6><p class="text-muted small mb-0">137 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-fish.png" class="mx-auto mb-3" width="77" alt="River Fish"><h6 class="fw-bold mb-1 text-dark">River Fish</h6><p class="text-muted small mb-0">34 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-meat.png" class="mx-auto mb-3" width="65" alt="Meat"><h6 class="fw-bold mb-1 text-dark">Meat</h6><p class="text-muted small mb-0">165 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-drinks.png" class="mx-auto mb-3" width="73" alt="Water and Drinks"><h6 class="fw-bold mb-1 text-dark">Water and Drinks</h6><p class="text-muted small mb-0">48 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-snacks.png" class="mx-auto mb-3" width="75" alt="Snacks"><h6 class="fw-bold mb-1 text-dark">Snacks</h6><p class="text-muted small mb-0">165 Products</p></div></div>
+                            </div>
+                        </div>
+
+                        <!-- SET 2 (Duplicate 6) -->
+                        <div class="category-set">
+                            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3 text-center w-100 m-0">
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-veg.png" class="mx-auto mb-3" width="77" alt="Vegetables"><h6 class="fw-bold mb-1 text-dark">Vegetables</h6><p class="text-muted small mb-0">165 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-fruit.png" class="mx-auto mb-3" width="77" alt="Fresh Fruit"><h6 class="fw-bold mb-1 text-dark">Fresh Fruit</h6><p class="text-muted small mb-0">137 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-fish.png" class="mx-auto mb-3" width="77" alt="River Fish"><h6 class="fw-bold mb-1 text-dark">River Fish</h6><p class="text-muted small mb-0">34 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-meat.png" class="mx-auto mb-3" width="65" alt="Meat"><h6 class="fw-bold mb-1 text-dark">Meat</h6><p class="text-muted small mb-0">165 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-drinks.png" class="mx-auto mb-3" width="73" alt="Water and Drinks"><h6 class="fw-bold mb-1 text-dark">Water and Drinks</h6><p class="text-muted small mb-0">48 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-snacks.png" class="mx-auto mb-3" width="75" alt="Snacks"><h6 class="fw-bold mb-1 text-dark">Snacks</h6><p class="text-muted small mb-0">165 Products</p></div></div>
+                            </div>
+                        </div>
+
+                        <!-- SET 3 (Duplicate 6) -->
+                        <div class="category-set">
+                            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3 text-center w-100 m-0">
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-veg.png" class="mx-auto mb-3" width="77" alt="Vegetables"><h6 class="fw-bold mb-1 text-dark">Vegetables</h6><p class="text-muted small mb-0">165 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-fruit.png" class="mx-auto mb-3" width="77" alt="Fresh Fruit"><h6 class="fw-bold mb-1 text-dark">Fresh Fruit</h6><p class="text-muted small mb-0">137 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-fish.png" class="mx-auto mb-3" width="77" alt="River Fish"><h6 class="fw-bold mb-1 text-dark">River Fish</h6><p class="text-muted small mb-0">34 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-meat.png" class="mx-auto mb-3" width="65" alt="Meat"><h6 class="fw-bold mb-1 text-dark">Meat</h6><p class="text-muted small mb-0">165 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-drinks.png" class="mx-auto mb-3" width="73" alt="Water and Drinks"><h6 class="fw-bold mb-1 text-dark">Water and Drinks</h6><p class="text-muted small mb-0">48 Products</p></div></div>
+                                <div class="col"><div class="card category-card h-100 shadow-none py-4"><img src="assets/cat-snacks.png" class="mx-auto mb-3" width="75" alt="Snacks"><h6 class="fw-bold mb-1 text-dark">Snacks</h6><p class="text-muted small mb-0">165 Products</p></div></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="btn btn-white rounded-circle shadow-sm icon-btn-lg border text-muted" onclick="slideCategories('right')"><i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+<!-- ============================================== --> 
+<!-- TRUSTED ORGANIC FOOD STORE --> 
+<!-- ============================================== --> 
+<section class="store-section py-5 position-relative bg-white" style="overflow: hidden;"> 
+    <!-- Floating Background Assets -->
+    <img src="assets/float-store-leaf-tl.png" class="position-absolute" style="top: 0; left: 25%; z-index: 2;" alt=""> 
+    <img src="assets/float-store-brush-l.png" class="position-absolute" style="top: 10%; left: 0; max-height: 80%; z-index: 1;" alt=""> 
+    <img src="assets/float-store-eggplant-bl.png" class="position-absolute" style="bottom: 5%; left: 2%; z-index: 1;" alt=""> 
+    <img src="assets/float-store-radish-r.png" class="position-absolute" style="top: 20%; right: 2%; z-index: 1;" alt=""> 
+    <img src="assets/float-store-leaf-br.png" class="position-absolute" style="bottom: 5%; right: 5%; z-index: 1;" alt=""> 
+
+    <div class="container position-relative z-3 pt-4"> 
+        <div class="row align-items-center g-5"> 
+            
+            <!-- Left: Two Image Columns (Equal Height Side-by-Side Layout) --> 
+            <div class="col-lg-6"> 
+                <div class="row g-3 align-items-stretch position-relative"> 
+                    <!-- Floating overlapping leaf details -->
+                    <img src="assets/float-store-leaf-bl.png" class="position-absolute" style="bottom: -15px; left: -15px; width: 60px; z-index: 4;" alt=""> 
+                    
+                    <!-- Left Image (Farmer) --> 
+                    <div class="col-6">
+                        <div class="h-100 rounded-3 overflow-hidden shadow-sm">
+                            <img src="assets/store-img-1.png" class="w-100 h-100 object-fit-cover" alt="Farmer" style="min-height: 380px;"> 
+                        </div>
+                    </div> 
+                    
+                    <!-- Right Image (Apple Picker) --> 
+                    <div class="col-6"> 
+                        <div class="h-100 rounded-3 overflow-hidden shadow-sm">
+                            <img src="assets/store-img-2.png" class="w-100 h-100 object-fit-cover" alt="Apple Picker" style="min-height: 380px;"> 
+                        </div>
+                    </div> 
+                </div> 
+            </div> 
+
+            <!-- Right: Text Content --> 
+            <div class="col-lg-6 ps-lg-5"> 
+                <h1 class="fw-bold text-dark mb-4" style="font-size: 2.75rem; line-height: 1.2;">100% Trusted<br>Organic Food Store</h1> 
+                
+                <!-- Feature 1 -->
+                <div class="d-flex mb-4"> 
+                    <div class="me-3 mt-1">
+                        <img src="assets/icon-check-green-circle.png" width="24" height="24" alt="Check"> 
+                    </div>
+                    <div> 
+                        <h5 class="fw-bold mb-2" style="color: #111; font-size: 1.15rem;">Healthy & natural food for lovers of healthy food.</h5> 
+                        <p class="text-muted small" style="line-height: 1.6;">Ut quis tempus erat. Phasellus euismod bibendum magna non tristique. Pellentesque semper vestibulum elit sed condimentum. Nunc pretium fermentum interdum.</p> 
+                    </div> 
+                </div> 
+                
+                <!-- Feature 2 -->
+                <div class="d-flex mb-4"> 
+                    <div class="me-3 mt-1">
+                        <img src="assets/icon-check-green-circle.png" width="24" height="24" alt="Check"> 
+                    </div>
+                    <div> 
+                        <h5 class="fw-bold mb-2" style="color: #111; font-size: 1.15rem;">Every day fresh and quality products for you.</h5> 
+                        <p class="text-muted small" style="line-height: 1.6;">Maecenas vehicula a justo quis laoreet. Sed in placerat nibh, a posuere ex. Morbi sem neque, aliquam sed orci et, rhoncus lobortis felis. Sed vestibulum nisl sit amet sapien.</p> 
+                    </div> 
+                </div> 
+                
+                <!-- Action Button -->
+                <a href="shop1.html" class="btn btn-success rounded-pill px-4 py-2½ fw-medium shadow-sm mt-2" style="background-color: #00b822; border-color: #00b822; padding: 12px 30px;">
+                    Shop Now <i class="bi bi-arrow-right ms-2"></i>
+                </a> 
+            </div> 
+
+        </div> 
+    </div> 
+</section>
+
+
+    <!-- STATS COUNTER -->
+    <section class="stats-section position-relative py-5">
+        <div class="stats-bg position-absolute top-0 start-0 w-100 h-100 z-0"></div>
+        <img src="assets/float-stats-leaves-tl.png" class="stats-float stats-leaves-tl" alt="">
+        <img src="assets/float-stats-pear-tr.png" class="stats-float stats-pear-tr" alt="">
+        <div class="container position-relative z-1 py-5">
+            <div class="row g-4 text-center py-3">
+                <div class="col-lg-3 col-md-6"><div class="stat-box p-4 rounded"><h2 class="text-success fw-bold display-5 mb-1">37+</h2><p class="text-white-50 mb-0 fw-medium">Years of Hard Work</p></div></div>
+                <div class="col-lg-3 col-md-6"><div class="stat-box p-4 rounded"><h2 class="text-success fw-bold display-5 mb-1">500k+</h2><p class="text-white-50 mb-0 fw-medium">Happy Customer</p></div></div>
+                <div class="col-lg-3 col-md-6"><div class="stat-box p-4 rounded"><h2 class="text-success fw-bold display-5 mb-1">28</h2><p class="text-white-50 mb-0 fw-medium">Qualified Team Member</p></div></div>
+                <div class="col-lg-3 col-md-6"><div class="stat-box p-4 rounded"><h2 class="text-success fw-bold display-5 mb-1">750k+</h2><p class="text-white-50 mb-0 fw-medium">Monthly Orders</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO BANNERS -->
+    <section class="promo-section position-relative py-5 bg-white">
+        <img src="assets/float-promo-peas-tl.png" class="promo-float promo-peas-tl" alt="">
+        <img src="assets/float-promo-brush-r.png" class="promo-float promo-brush-r" alt="">
+        <img src="assets/float-promo-leaf-r.png" class="promo-float promo-leaf-r" alt="">
+        <div class="container position-relative z-1">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="promo-banner promo-dark rounded shadow-sm d-flex flex-column justify-content-center p-5 h-100">
+                        <p class="text-white text-uppercase mb-2 small letter-spacing-1">100% Organic</p>
+                        <h2 class="text-white fw-bold mb-3 display-6">Fruit & Vegetable</h2>
+                        <div class="d-flex align-items-center mb-4"><span class="text-white-50 me-3">Starting at:</span><span class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-1">$11.99</span></div>
+                        <div><a href="shop1.html" class="btn btn-success rounded-pill px-4 fw-medium">Shop Now <i class="bi bi-arrow-right ms-2"></i></a></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="promo-banner promo-blue rounded shadow-sm d-flex flex-column justify-content-center p-5 h-100">
+                        <p class="text-white text-uppercase mb-2 small letter-spacing-1">Sale Off The Week</p>
+                        <h2 class="text-white fw-bold mb-3 display-6">Sales of the Year</h2>
+                        <table border="0" cellpadding="0" cellspacing="0" class="text-white mb-4 text-center">
+                            <tr>
+                                <td width="40"><h3 class="fw-bold mb-0" id="timer-days">00</h3><small class="text-white-50 font-sm">DAYS</small></td><td width="20"><h4 class="mb-3 text-white-50">:</h4></td>
+                                <td width="40"><h3 class="fw-bold mb-0" id="timer-hours">00</h3><small class="text-white-50 font-sm">HOURS</small></td><td width="20"><h4 class="mb-3 text-white-50">:</h4></td>
+                                <td width="40"><h3 class="fw-bold mb-0" id="timer-mins">00</h3><small class="text-white-50 font-sm">MINS</small></td><td width="20"><h4 class="mb-3 text-white-50">:</h4></td>
+                                <td width="40"><h3 class="fw-bold mb-0" id="timer-secs">00</h3><small class="text-white-50 font-sm">SECS</small></td>
+                            </tr>
+                        </table>
+                        <div><a href="shop2.html" class="btn btn-success rounded-pill px-4 fw-medium">Shop Now <i class="bi bi-arrow-right ms-2"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEST SELLER PRODUCTS GRID -->
+    <section class="best-sellers py-5 position-relative bg-white">
+        <div class="container position-relative z-1">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold m-0">Best Seller Products</h2>
+                <a href="shop1.html" class="text-success text-decoration-none fw-medium">View All <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100 position-relative" onclick="window.location.href='product1.html'">
+                        <div class="product-actions position-absolute top-0 end-0 p-3 d-flex flex-column gap-2 z-2">
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation(); addToWishlist('bsg1', 'Green Apple', 14.99, 'assets/product-apple.png')"><img src="assets/wishlist.png" width="16" alt="Wish"></button>
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation();"><i class="bi bi-eye"></i></button>
+                        </div>
+                        <div class="p-4 text-center"><img src="assets/product-apple.png" class="card-img-top w-75" alt="Green Apple"></div>
+                        <div class="card-body d-flex justify-content-between align-items-end">
+                            <div><p class="text-muted small mb-1">Green Apple</p><h5 class="fw-bold mb-1 text-dark">$14.99</h5><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div></div>
+                            <button class="btn rounded-circle cart-btn shadow-none" onclick="event.stopPropagation(); addToCart('bsg1', 'Green Apple', 14.99, 'assets/product-apple.png')"><img src="assets/Cart.png" width="16" alt="Cart"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100 position-relative" onclick="window.location.href='product1.html'">
+                        <div class="product-actions position-absolute top-0 end-0 p-3 d-flex flex-column gap-2 z-2">
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation(); addToWishlist('bsg2', 'Chinese Cabbage', 14.99, 'assets/product-cabbage.png')"><img src="assets/wishlist.png" width="16" alt="Wish"></button>
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation();"><i class="bi bi-eye"></i></button>
+                        </div>
+                        <div class="p-4 text-center"><img src="assets/product-cabbage.png" class="card-img-top w-75" alt="Chinese Cabbage"></div>
+                        <div class="card-body d-flex justify-content-between align-items-end">
+                            <div><p class="text-muted small mb-1">Chinese Cabbage</p><h5 class="fw-bold mb-1 text-dark">$14.99</h5><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div></div>
+                            <button class="btn rounded-circle cart-btn shadow-none" onclick="event.stopPropagation(); addToCart('bsg2', 'Chinese Cabbage', 14.99, 'assets/product-cabbage.png')"><img src="assets/Cart.png" width="16" alt="Cart"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100 position-relative" onclick="window.location.href='product1.html'">
+                        <div class="product-actions position-absolute top-0 end-0 p-3 d-flex flex-column gap-2 z-2">
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation(); addToWishlist('bsg3', 'Green Lettuce', 14.99, 'assets/product-lettuce.png')"><img src="assets/wishlist.png" width="16" alt="Wish"></button>
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation();"><i class="bi bi-eye"></i></button>
+                        </div>
+                        <div class="p-4 text-center"><img src="assets/product-lettuce.png" class="card-img-top w-75" alt="Green Lettuce"></div>
+                        <div class="card-body d-flex justify-content-between align-items-end">
+                            <div><p class="text-muted small mb-1">Green Lettuce</p><h5 class="fw-bold mb-1 text-dark">$14.99</h5><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div></div>
+                            <button class="btn rounded-circle cart-btn shadow-none" onclick="event.stopPropagation(); addToCart('bsg3', 'Green Lettuce', 14.99, 'assets/product-lettuce.png')"><img src="assets/Cart.png" width="16" alt="Cart"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100 position-relative" onclick="window.location.href='product1.html'">
+                        <div class="product-actions position-absolute top-0 end-0 p-3 d-flex flex-column gap-2 z-2">
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation(); addToWishlist('bsg4', 'Corn', 14.99, 'assets/product-corn.png')"><img src="assets/wishlist.png" width="16" alt="Wish"></button>
+                            <button class="btn btn-light rounded-circle shadow-sm p-1 border border-light-subtle icon-btn" onclick="event.stopPropagation();"><i class="bi bi-eye"></i></button>
+                        </div>
+                        <div class="p-4 text-center"><img src="assets/product-corn.png" class="card-img-top w-75" alt="Corn"></div>
+                        <div class="card-body d-flex justify-content-between align-items-end">
+                            <div><p class="text-muted small mb-1">Corn</p><h5 class="fw-bold mb-1 text-dark">$14.99</h5><div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div></div>
+                            <button class="btn rounded-circle cart-btn shadow-none" onclick="event.stopPropagation(); addToCart('bsg4', 'Corn', 14.99, 'assets/product-corn.png')"><img src="assets/Cart.png" width="16" alt="Cart"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- ============================================== -->
+    <!-- LISTS & AD BANNER SECTION (Dynamic Hovers added) -->
+    <!-- ============================================== -->
+    <section class="lists-ad-section py-5 position-relative bg-white">
+        <img src="assets/float-deals-leaf-ml.png" class="deals-float deals-leaf-ml" alt="">
+        <div class="container position-relative z-1">
+            <div class="row g-4">
+                
+                <!-- Col 1: Hot Deals -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4">Hot Deals</h5>
+                    
+                    <div class="list-table-card bg-white rounded mb-3 position-relative overflow-hidden cursor-pointer" onclick="window.location.href='product1.html'">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="35%" align="center" valign="middle" class="p-2 border-end border-light-subtle card-img-container"><img src="assets/small-apple.png" width="65" alt=""></td>
+                                <td width="65%" valign="middle" class="p-2 ps-3 card-content">
+                                    <p class="small text-muted mb-1 card-title">Green Apple</p>
+                                    <h6 class="fw-bold mb-1 text-dark">$14.99</h6>
+                                    <div class="text-warning icon-sm mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="hover-action-icons d-none mt-2">
+                                        <tr>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToCart('hd1', 'Green Apple', 14.99, 'assets/small-apple.png')"><img src="assets/Cart.png" width="14" alt="Cart"></button></td>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation();"><i class="bi bi-eye" style="font-size: 14px;"></i></button></td>
+                                            <td><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToWishlist('hd1', 'Green Apple', 14.99, 'assets/small-apple.png')"><img src="assets/wishlist.png" width="14" alt="Wish"></button></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="list-table-card bg-white rounded mb-3 position-relative overflow-hidden cursor-pointer" onclick="window.location.href='product1.html'">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="35%" align="center" valign="middle" class="p-2 border-end border-light-subtle card-img-container"><img src="assets/small-malta.png" width="65" alt=""></td>
+                                <td width="65%" valign="middle" class="p-2 ps-3 card-content">
+                                    <p class="small text-muted mb-1 card-title">Indian Malta</p>
+                                    <h6 class="fw-bold mb-1 text-dark">$14.99</h6>
+                                    <div class="text-warning icon-sm mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="hover-action-icons d-none mt-2">
+                                        <tr>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToCart('hd2', 'Indian Malta', 14.99, 'assets/small-malta.png')"><img src="assets/Cart.png" width="14" alt="Cart"></button></td>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation();"><i class="bi bi-eye" style="font-size: 14px;"></i></button></td>
+                                            <td><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToWishlist('hd2', 'Indian Malta', 14.99, 'assets/small-malta.png')"><img src="assets/wishlist.png" width="14" alt="Wish"></button></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="list-table-card bg-white rounded mb-3 position-relative overflow-hidden cursor-pointer" onclick="window.location.href='product1.html'">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="35%" align="center" valign="middle" class="p-2 border-end border-light-subtle card-img-container"><img src="assets/small-lettuce.png" width="65" alt=""></td>
+                                <td width="65%" valign="middle" class="p-2 ps-3 card-content">
+                                    <p class="small text-muted mb-1 card-title">Green Lettuce</p>
+                                    <h6 class="fw-bold mb-1 text-dark">$14.99</h6>
+                                    <div class="text-warning icon-sm mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="hover-action-icons d-none mt-2">
+                                        <tr>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToCart('hd3', 'Green Lettuce', 14.99, 'assets/small-lettuce.png')"><img src="assets/Cart.png" width="14" alt="Cart"></button></td>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation();"><i class="bi bi-eye" style="font-size: 14px;"></i></button></td>
+                                            <td><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToWishlist('hd3', 'Green Lettuce', 14.99, 'assets/small-lettuce.png')"><img src="assets/wishlist.png" width="14" alt="Wish"></button></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Col 2: Best Seller (Mini) -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4">Best Seller</h5>
+                    <div class="list-table-card bg-white rounded mb-3 position-relative overflow-hidden cursor-pointer" onclick="window.location.href='product1.html'">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="35%" align="center" valign="middle" class="p-2 border-end border-light-subtle card-img-container"><img src="assets/small-eggplant.png" width="65" alt=""></td>
+                                <td width="65%" valign="middle" class="p-2 ps-3 card-content">
+                                    <p class="small text-muted mb-1 card-title">Eggplant</p>
+                                    <h6 class="fw-bold mb-1 text-dark">$14.99</h6>
+                                    <div class="text-warning icon-sm mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="hover-action-icons d-none mt-2">
+                                        <tr>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToCart('bs1', 'Eggplant', 14.99, 'assets/small-eggplant.png')"><img src="assets/Cart.png" width="14" alt="Cart"></button></td>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation();"><i class="bi bi-eye" style="font-size: 14px;"></i></button></td>
+                                            <td><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToWishlist('bs1', 'Eggplant', 14.99, 'assets/small-eggplant.png')"><img src="assets/wishlist.png" width="14" alt="Wish"></button></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="list-table-card bg-white rounded mb-3 position-relative overflow-hidden cursor-pointer" onclick="window.location.href='product1.html'">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="35%" align="center" valign="middle" class="p-2 border-end border-light-subtle card-img-container"><img src="assets/small-capsicum.png" width="65" alt=""></td>
+                                <td width="65%" valign="middle" class="p-2 ps-3 card-content">
+                                    <p class="small text-muted mb-1 card-title">Red Capsicum</p>
+                                    <h6 class="fw-bold mb-1 text-dark">$14.99 <span class="text-muted text-decoration-line-through font-sm">$20.99</span></h6>
+                                    <div class="text-warning icon-sm mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="hover-action-icons d-none mt-2">
+                                        <tr>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToCart('bs2', 'Red Capsicum', 14.99, 'assets/small-capsicum.png')"><img src="assets/Cart.png" width="14" alt="Cart"></button></td>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation();"><i class="bi bi-eye" style="font-size: 14px;"></i></button></td>
+                                            <td><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToWishlist('bs2', 'Red Capsicum', 14.99, 'assets/small-capsicum.png')"><img src="assets/wishlist.png" width="14" alt="Wish"></button></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="list-table-card bg-white rounded mb-3 position-relative overflow-hidden cursor-pointer" onclick="window.location.href='product1.html'">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="35%" align="center" valign="middle" class="p-2 border-end border-light-subtle card-img-container"><img src="assets/small-tomato.png" width="65" alt=""></td>
+                                <td width="65%" valign="middle" class="p-2 ps-3 card-content">
+                                    <p class="small text-muted mb-1 card-title">Red Tomatos</p>
+                                    <h6 class="fw-bold mb-1 text-dark">$14.99</h6>
+                                    <div class="text-warning icon-sm mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="hover-action-icons d-none mt-2">
+                                        <tr>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToCart('bs3', 'Red Tomatos', 14.99, 'assets/small-tomato.png')"><img src="assets/Cart.png" width="14" alt="Cart"></button></td>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation();"><i class="bi bi-eye" style="font-size: 14px;"></i></button></td>
+                                            <td><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToWishlist('bs3', 'Red Tomatos', 14.99, 'assets/small-tomato.png')"><img src="assets/wishlist.png" width="14" alt="Wish"></button></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Col 3: Top Rated -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4">Top Rated</h5>
+                    <div class="list-table-card bg-white rounded mb-3 position-relative overflow-hidden cursor-pointer" onclick="window.location.href='product1.html'">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="35%" align="center" valign="middle" class="p-2 border-end border-light-subtle card-img-container"><img src="assets/small-potato.png" width="65" alt=""></td>
+                                <td width="65%" valign="middle" class="p-2 ps-3 card-content">
+                                    <p class="small text-muted mb-1 card-title">Big Potatos</p>
+                                    <h6 class="fw-bold mb-1 text-dark">$14.99</h6>
+                                    <div class="text-warning icon-sm mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="hover-action-icons d-none mt-2">
+                                        <tr>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToCart('tr1', 'Big Potatos', 14.99, 'assets/small-potato.png')"><img src="assets/Cart.png" width="14" alt="Cart"></button></td>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation();"><i class="bi bi-eye" style="font-size: 14px;"></i></button></td>
+                                            <td><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToWishlist('tr1', 'Big Potatos', 14.99, 'assets/small-potato.png')"><img src="assets/wishlist.png" width="14" alt="Wish"></button></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="list-table-card bg-white rounded mb-3 position-relative overflow-hidden cursor-pointer" onclick="window.location.href='product1.html'">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="35%" align="center" valign="middle" class="p-2 border-end border-light-subtle card-img-container"><img src="assets/small-corn.png" width="65" alt=""></td>
+                                <td width="65%" valign="middle" class="p-2 ps-3 card-content">
+                                    <p class="small text-muted mb-1 card-title">Corn</p>
+                                    <h6 class="fw-bold mb-1 text-dark">$14.99 <span class="text-muted text-decoration-line-through font-sm">$20.99</span></h6>
+                                    <div class="text-warning icon-sm mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="hover-action-icons d-none mt-2">
+                                        <tr>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToCart('tr2', 'Corn', 14.99, 'assets/small-corn.png')"><img src="assets/Cart.png" width="14" alt="Cart"></button></td>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation();"><i class="bi bi-eye" style="font-size: 14px;"></i></button></td>
+                                            <td><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToWishlist('tr2', 'Corn', 14.99, 'assets/small-corn.png')"><img src="assets/wishlist.png" width="14" alt="Wish"></button></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="list-table-card bg-white rounded mb-3 position-relative overflow-hidden cursor-pointer" onclick="window.location.href='product1.html'">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="35%" align="center" valign="middle" class="p-2 border-end border-light-subtle card-img-container"><img src="assets/small-cauliflower.png" width="65" alt=""></td>
+                                <td width="65%" valign="middle" class="p-2 ps-3 card-content">
+                                    <p class="small text-muted mb-1 card-title">Fresh cauliflower</p>
+                                    <h6 class="fw-bold mb-1 text-dark">$14.99</h6>
+                                    <div class="text-warning icon-sm mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                                    <table border="0" cellpadding="0" cellspacing="0" class="hover-action-icons d-none mt-2">
+                                        <tr>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToCart('tr3', 'Fresh cauliflower', 14.99, 'assets/small-cauliflower.png')"><img src="assets/Cart.png" width="14" alt="Cart"></button></td>
+                                            <td class="pe-1"><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation();"><i class="bi bi-eye" style="font-size: 14px;"></i></button></td>
+                                            <td><button class="btn icon-btn shadow-none" style="width: 30px; height: 30px;" onclick="event.stopPropagation(); addToWishlist('tr3', 'Fresh cauliflower', 14.99, 'assets/small-cauliflower.png')"><img src="assets/wishlist.png" width="14" alt="Wish"></button></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Col 4: Ad Banner -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="ad-banner bg-warning rounded position-relative h-100 d-flex flex-column text-center p-4 overflow-hidden shadow-sm">
+                        <div class="position-relative z-2 pt-2">
+                            <p class="text-uppercase small mb-2 fw-semibold text-dark">Hot Sale</p>
+                            <h2 class="fw-bold mb-4 text-dark display-6">Save 37% <br><span class="fs-4 fw-normal">on Every Order</span></h2>
+                            <a href="shop1.html" class="btn btn-light rounded-pill px-4 py-2 text-success fw-bold shadow-sm">Shop Now <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                        <img src="assets/ad-basket.jpg" class="position-absolute bottom-0 start-50 translate-middle-x ad-basket-img z-1" alt="Apples in Basket">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST NEWS (BLOG) WITH UPDATED ICON -->
+    <section class="blog-section py-5 position-relative bg-light overflow-hidden">
+        <img src="assets/float-blog-bg-left.png" class="blog-float blog-bg-left" alt="">
+        <img src="assets/float-blog-bg-right.png" class="blog-float blog-bg-right" alt="">
+        <img src="assets/float-blog-leaf-tc.png" class="blog-float blog-leaf-tc" alt="">
+        <div class="container position-relative z-1 py-4">
+            <div class="text-center mb-5">
+                <img src="assets/blog_text.png" height="24" alt="Blog" class="mb-2">
+                <h2 class="fw-bold display-6 m-0">Latest News</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card h-100 border-0 shadow-sm rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img src="assets/blog-1.png" class="card-img-top" alt="Citrus Fruits">
+                            <div class="date-badge bg-white text-center position-absolute rounded shadow-sm"><h5 class="fw-bold m-0 text-dark">18</h5><small class="text-muted text-uppercase">Nov</small></div>
+                        </div>
+                        <div class="card-body p-4">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mb-3 font-sm text-muted"><tr><td align="left" valign="middle"><i class="bi bi-tag me-1"></i> Food</td><td align="center" valign="middle"><i class="bi bi-person me-1"></i> By Admin</td><td align="right" valign="middle"><i class="bi bi-chat me-1"></i> 65 Comments</td></tr></table>
+                            <h5 class="fw-bold mb-3 text-success">Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                            <a href="#" class="text-success text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card h-100 border-0 shadow-sm rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img src="assets/blog-2.png" class="card-img-top" alt="Healthy Plate">
+                            <div class="date-badge bg-white text-center position-absolute rounded shadow-sm"><h5 class="fw-bold m-0 text-dark">23</h5><small class="text-muted text-uppercase">Jan</small></div>
+                        </div>
+                        <div class="card-body p-4">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mb-3 font-sm text-muted"><tr><td align="left" valign="middle"><i class="bi bi-tag me-1"></i> Food</td><td align="center" valign="middle"><i class="bi bi-person me-1"></i> By Admin</td><td align="right" valign="middle"><i class="bi bi-chat me-1"></i> 65 Comments</td></tr></table>
+                            <h5 class="fw-bold mb-3 text-dark">Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                            <a href="#" class="text-success text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card h-100 border-0 shadow-sm rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img src="assets/blog-3.png" class="card-img-top" alt="Salad Bowl">
+                            <div class="date-badge bg-white text-center position-absolute rounded shadow-sm"><h5 class="fw-bold m-0 text-dark">18</h5><small class="text-muted text-uppercase">Nov</small></div>
+                        </div>
+                        <div class="card-body p-4">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mb-3 font-sm text-muted"><tr><td align="left" valign="middle"><i class="bi bi-tag me-1"></i> Food</td><td align="center" valign="middle"><i class="bi bi-person me-1"></i> By Admin</td><td align="right" valign="middle"><i class="bi bi-chat me-1"></i> 65 Comments</td></tr></table>
+                            <h5 class="fw-bold mb-3 text-dark">Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h5>
+                            <a href="#" class="text-success text-decoration-none fw-bold">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS (Dynamic Slider 3 Sets) -->
+    <section class="testimonial-section py-5 position-relative bg-white overflow-hidden">
+        <img src="assets/float-testi-leaf-tr.png" class="testi-float testi-leaf-tr" alt="">
+        <img src="assets/float-testi-radish-r.png" class="testi-float testi-radish-r" alt="">
+        <div class="container position-relative z-1 py-4">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <img src="assets/testimonial_text.png" height="20" alt="Testimonial" class="mb-2">
+                    <h2 class="fw-bold display-6 m-0">What Our Customer Says</h2>
+                </div>
+                <div class="d-flex gap-2 pb-1">
+                    <button class="btn btn-white rounded-circle shadow-sm icon-btn-lg border text-muted" onclick="slideTestimonials('left')"><i class="bi bi-arrow-left"></i></button>
+                    <button class="btn btn-white rounded-circle shadow-sm icon-btn-lg border text-muted" onclick="slideTestimonials('right')"><i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="testimonial-viewport">
+                <div class="testimonial-track" id="testimonial-track" style="transform: translateX(0);">
+                    <!-- Set 1 -->
+                    <div class="testimonial-set">
+                        <div class="card h-100 border-0 shadow-sm rounded p-4 bg-white"><img src="assets/icon-quote.png" class="mb-3" width="30" alt="Quote"><p class="text-muted small mb-4 lh-lg">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum.</p><table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-auto"><tr><td width="55"><img src="assets/avatar-1.png" width="45" class="rounded-circle"></td><td><h6 class="fw-bold mb-0 text-dark">Robert Fox</h6><span class="small text-muted font-sm">Customer</span></td><td align="right" class="text-warning icon-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td></tr></table></div>
+                        <div class="card h-100 border-0 shadow-sm rounded p-4 bg-white"><img src="assets/icon-quote.png" class="mb-3" width="30" alt="Quote"><p class="text-muted small mb-4 lh-lg">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum.</p><table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-auto"><tr><td width="55"><img src="assets/avatar-2.png" width="45" class="rounded-circle"></td><td><h6 class="fw-bold mb-0 text-dark">Dianne Russell</h6><span class="small text-muted font-sm">Customer</span></td><td align="right" class="text-warning icon-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td></tr></table></div>
+                        <div class="card h-100 border-0 shadow-sm rounded p-4 bg-white"><img src="assets/icon-quote.png" class="mb-3" width="30" alt="Quote"><p class="text-muted small mb-4 lh-lg">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum.</p><table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-auto"><tr><td width="55"><img src="assets/avatar-3.png" width="45" class="rounded-circle"></td><td><h6 class="fw-bold mb-0 text-dark">Eleanor Pena</h6><span class="small text-muted font-sm">Customer</span></td><td align="right" class="text-warning icon-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td></tr></table></div>
+                    </div>
+                    <!-- Set 2 -->
+                    <div class="testimonial-set">
+                        <div class="card h-100 border-0 shadow-sm rounded p-4 bg-white"><img src="assets/icon-quote.png" class="mb-3" width="30" alt="Quote"><p class="text-muted small mb-4 lh-lg">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum.</p><table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-auto"><tr><td width="55"><img src="assets/avatar-1.png" width="45" class="rounded-circle"></td><td><h6 class="fw-bold mb-0 text-dark">Robert Fox</h6><span class="small text-muted font-sm">Customer</span></td><td align="right" class="text-warning icon-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td></tr></table></div>
+                        <div class="card h-100 border-0 shadow-sm rounded p-4 bg-white"><img src="assets/icon-quote.png" class="mb-3" width="30" alt="Quote"><p class="text-muted small mb-4 lh-lg">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum.</p><table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-auto"><tr><td width="55"><img src="assets/avatar-2.png" width="45" class="rounded-circle"></td><td><h6 class="fw-bold mb-0 text-dark">Dianne Russell</h6><span class="small text-muted font-sm">Customer</span></td><td align="right" class="text-warning icon-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td></tr></table></div>
+                        <div class="card h-100 border-0 shadow-sm rounded p-4 bg-white"><img src="assets/icon-quote.png" class="mb-3" width="30" alt="Quote"><p class="text-muted small mb-4 lh-lg">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum.</p><table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-auto"><tr><td width="55"><img src="assets/avatar-3.png" width="45" class="rounded-circle"></td><td><h6 class="fw-bold mb-0 text-dark">Eleanor Pena</h6><span class="small text-muted font-sm">Customer</span></td><td align="right" class="text-warning icon-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td></tr></table></div>
+                    </div>
+                    <!-- Set 3 -->
+                    <div class="testimonial-set">
+                        <div class="card h-100 border-0 shadow-sm rounded p-4 bg-white"><img src="assets/icon-quote.png" class="mb-3" width="30" alt="Quote"><p class="text-muted small mb-4 lh-lg">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum.</p><table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-auto"><tr><td width="55"><img src="assets/avatar-1.png" width="45" class="rounded-circle"></td><td><h6 class="fw-bold mb-0 text-dark">Robert Fox</h6><span class="small text-muted font-sm">Customer</span></td><td align="right" class="text-warning icon-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td></tr></table></div>
+                        <div class="card h-100 border-0 shadow-sm rounded p-4 bg-white"><img src="assets/icon-quote.png" class="mb-3" width="30" alt="Quote"><p class="text-muted small mb-4 lh-lg">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum.</p><table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-auto"><tr><td width="55"><img src="assets/avatar-2.png" width="45" class="rounded-circle"></td><td><h6 class="fw-bold mb-0 text-dark">Dianne Russell</h6><span class="small text-muted font-sm">Customer</span></td><td align="right" class="text-warning icon-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td></tr></table></div>
+                        <div class="card h-100 border-0 shadow-sm rounded p-4 bg-white"><img src="assets/icon-quote.png" class="mb-3" width="30" alt="Quote"><p class="text-muted small mb-4 lh-lg">Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum.</p><table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-auto"><tr><td width="55"><img src="assets/avatar-3.png" width="45" class="rounded-circle"></td><td><h6 class="fw-bold mb-0 text-dark">Eleanor Pena</h6><span class="small text-muted font-sm">Customer</span></td><td align="right" class="text-warning icon-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td></tr></table></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRE-FOOTER (With Green Borders & Capsule Newsletter) -->
+    <section class="brands-prefooter-section position-relative py-5 bg-white">
+        <div class="container position-relative z-1 pt-3">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mb-5 pb-3">
+                <tr><td align="center" valign="middle"><img src="assets/brand-steps.png" height="30" alt="Steps"></td><td align="center" valign="middle" width="1" bgcolor="#E6E6E6" height="40"></td><td align="center" valign="middle"><img src="assets/brand-mango.png" height="30" alt="Mango"></td><td align="center" valign="middle" width="1" bgcolor="#E6E6E6"></td><td align="center" valign="middle"><img src="assets/brand-food.png" height="40" alt="Food"></td><td align="center" valign="middle" width="1" bgcolor="#E6E6E6"></td><td align="center" valign="middle"><img src="assets/brand-food-2.png" height="30" alt="Food"></td><td align="center" valign="middle" width="1" bgcolor="#E6E6E6"></td><td align="center" valign="middle"><img src="assets/brand-bookoff.png" height="25" alt="Book Off"></td><td align="center" valign="middle" width="1" bgcolor="#E6E6E6"></td><td align="center" valign="middle"><img src="assets/brand-gseries.png" height="30" alt="G Series"></td></tr>
+            </table>
+
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <div class="card h-100 border-success-subtle rounded-3 p-4 bg-white shadow-none">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr><td align="left" valign="top" class="pb-3"><img src="assets/icon-location.png" width="45" alt="Location"></td></tr>
+                            <tr><td align="left" valign="top"><h6 class="fw-bold mb-2 text-dark" style="font-size: 13px; letter-spacing: 0.5px;">OUR LOCATION</h6><p class="text-muted small mb-0 lh-base">1901 Thornridge Cir. Shiloh, Washington DC 20020</p></td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card h-100 border-success-subtle rounded-3 p-4 bg-white shadow-none">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr><td align="left" valign="top" class="pb-3"><img src="assets/icon-phone.png" width="45" alt="Phone"></td></tr>
+                            <tr><td align="left" valign="top"><h6 class="fw-bold mb-2 text-dark" style="font-size: 13px; letter-spacing: 0.5px;">CALL US 24/7</h6><h5 class="text-success fw-bold mb-0 mt-2">(303) 555-0105</h5></td></tr>
+                        </table>
+                    </div>
+                </div>
+<div class="col-lg-6">
+                    <div class="card h-100 border-success-subtle rounded-3 p-4 bg-white shadow-none">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr><td align="left" valign="top" height="60"><img src="assets/icon-mail-green-circle.png" width="55" alt="Mail"></td></tr>
+                            <tr>
+                                <td align="left" valign="top">
+                                    <h6 class="fw-bold mb-3 text-dark" style="font-size: 13px; letter-spacing: 0.5px;">SUBSCRIBE NEWSLETTER</h6>
+                                    
+                                    <!-- Perfect Capsule Newsletter -->
+<div class="newsletter-capsule shadow-sm">
+    <input type="email" placeholder="Your email address" class="text-muted font-sm">
+    <button class="btn btn-success fw-bold">Subscribe</button>
+</div>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- ============================================== -->
+    <!-- FOOTER -->
+    <!-- ============================================== -->
+    <footer class="footer-section position-relative pt-5 pb-3 bg-dark overflow-hidden">
+        
+        <!-- Floating Background Assets -->
+        <img src="assets/footer-brush-left.png" class="position-absolute top-0 start-0 h-100 z-0" style="opacity: 0.1;" alt="">
+        <img src="assets/footer-leaf-bl.png" class="position-absolute z-2" style="bottom: 25%; left: 4%; width: 45px;" alt="">
+        <img src="assets/footer-veg-right.png" class="position-absolute top-0 end-0 h-100 z-0" style="opacity: 0.1;" alt="">
+
+        <div class="container position-relative z-1 pt-4">
+            <div class="row g-4 mb-3">
+                
+                <!-- Col 1: Logo, Text, & Socials -->
+                <div class="col-lg-3 pe-lg-4">
+                    <img src="assets/logo-white.png" width="140" class="mb-4" alt="Ecobazar">
+                    <p class="text-white-50 font-sm mb-4 lh-lg">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magn.</p>
+                    
+<!-- Dynamic Social Icons (Images) -->
+                    <div class="d-flex gap-1">
+                        <a href="#" class="footer-social-btn">
+                            <img src="assets/icon-facebook.png" alt="Facebook">
+                        </a>
+                        <a href="#" class="footer-social-btn">
+                            <img src="assets/icon-twitter.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="footer-social-btn">
+                            <img src="assets/icon-pinterest.png" alt="Pinterest">
+                        </a>
+                        <a href="#" class="footer-social-btn">
+                            <img src="assets/icon-instagram.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Col 2: My Account -->
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-medium mb-3">My Account</h6>
+                    <div style="width: 35px; height: 2px; background-color: #00B207; margin-bottom: 1.5rem;"></div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">My Account</a></li>
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Order History</a></li>
+                        <!-- Matched template spelling exactly -->
+                        <li class="mb-3"><a href="cart.html" class="text-white-50 text-decoration-none font-sm hover-success">Shoping Cart</a></li>
+                        <li class="mb-0"><a href="wishlist.html" class="text-white-50 text-decoration-none font-sm hover-success">Wishlist</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Helps -->
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-medium mb-3">Helps</h6>
+                    <div style="width: 35px; height: 2px; background-color: #00B207; margin-bottom: 1.5rem;"></div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Contact</a></li>
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Faqs</a></li>
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Terms & Condition</a></li>
+                        <li class="mb-0"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Proxy -->
+                <div class="col-lg-2">
+                    <h6 class="text-white fw-medium mb-3">Proxy</h6>
+                    <div style="width: 35px; height: 2px; background-color: #00B207; margin-bottom: 1.5rem;"></div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">About</a></li>
+                        <li class="mb-3"><a href="shop1.html" class="text-white-50 text-decoration-none font-sm hover-success">Shop</a></li>
+                        <li class="mb-3"><a href="product1.html" class="text-white-50 text-decoration-none font-sm hover-success">Product</a></li>
+                        <li class="mb-0"><a href="#" class="text-white-50 text-decoration-none font-sm hover-success">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 5: Download Mobile App -->
+                <div class="col-lg-3">
+                    <h6 class="text-white fw-medium mb-3">Download Mobile App</h6>
+                    <div style="width: 35px; height: 2px; background-color: #00B207; margin-bottom: 1.5rem;"></div>
+                    
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="left" valign="top" class="pe-2">
+                                <a href="#"><img src="assets/badge-app-store.png" height="40" alt="App Store"></a>
+                            </td>
+                            <td align="left" valign="top">
+                                <a href="#"><img src="assets/badge-google-play.png" height="40" alt="Google Play"></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-5 mb-4">
+                <tr><td height="1" bgcolor="#333333"></td></tr>
+            </table>
+
+            <!-- Bottom Copyright & Payments -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="left" valign="middle">
+                        <p class="text-white-50 font-sm mb-0">Ecobazar eCommerce &copy; 2021. All Rights Reserved</p>
+                    </td>
+                    <td align="right" valign="middle">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-apple.png" width="45" alt="Apple Pay"></td>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-visa.png" width="45" alt="Visa"></td>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-discover.png" width="45" alt="Discover"></td>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-mastercard.png" width="45" alt="Mastercard"></td>
+                                <td align="center" valign="middle" class="ps-2"><img src="assets/pay-secure.png" width="60" alt="Secure Payment"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+
+    <!-- CART SIDEBAR POPUP -->
+    <div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+    <div id="cart-sidebar" class="cart-sidebar d-flex flex-column bg-white shadow">
+        <div class="p-4 border-bottom border-light-subtle d-flex justify-content-between align-items-center"><h5 class="fw-bold m-0 text-dark">Shopping Cart (<span id="popup-cart-count">0</span>)</h5><button class="btn btn-light rounded-circle bg-transparent border-0 p-1 fs-5 shadow-none" onclick="closeCart()"><i class="bi bi-x"></i></button></div>
+        <div id="popup-cart-list" class="p-4 flex-grow-1 overflow-auto"></div>
+        <div class="p-4 bg-white border-top">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mb-4"><tr><td align="left" valign="middle" class="font-sm text-dark">Total:</td><td align="right" valign="middle" class="fw-bold text-dark fs-5" id="popup-cart-total">$0.00</td></tr></table>
+            <a href="checkout.html" class="btn btn-success rounded-pill fw-bold w-100 py-3 mb-3 d-block text-center text-decoration-none border-0 shadow-none">Checkout</a>
+            <a href="cart.html" class="btn btn-light bg-success-light text-success rounded-pill fw-bold w-100 py-3 shadow-none d-block text-center text-decoration-none border-0">Go To Cart</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="ecommerce_app.js"></script> 
+    <script src="main_script.js"></script>
+</body>
+</html>

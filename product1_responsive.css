@@ -1,0 +1,80 @@
+@media (max-width: 991px) {
+    .header-middle { display: none !important; }
+    .top-bar .d-lg-flex { display: none !important; }
+    .top-bar .container { justify-content: center !important; }
+    #mobileMenu.offcanvas-start { width: 75vw !important; }
+    .product-overview .col-lg-6.d-flex {
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+    }
+    #thumb-container {
+        flex-direction: row !important;
+        overflow-x: auto;
+        max-width: 100%;
+        padding-bottom: 10px;
+    }
+    .product-overview .bi-chevron-up, 
+    .product-overview .bi-chevron-down {
+        display: none !important;
+    }
+    .thumb-img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+    }
+
+    .add-to-cart-wrapper > tbody > tr {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .add-to-cart-wrapper > tbody > tr > td {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0 !important;
+    }
+    
+    .add-to-cart-wrapper > tbody > tr > td:first-child table tr {
+        display: table-row !important;
+        flex-direction: row !important;
+    }
+    .add-to-cart-wrapper > tbody > tr > td:first-child table td {
+        display: table-cell !important;
+        width: auto !important;
+    }
+
+    /* ============================================== */
+    /* 4. Tab Menu Wrapping      */
+    /* ============================================== */
+    .tabs-section .d-flex.justify-content-center {
+        flex-wrap: wrap !important; 
+        justify-content: center !important;
+        gap: 10px !important; 
+        padding-bottom: 15px;
+    }
+    
+    .tabs-section .tab-btn {
+        font-size: 1rem !important; 
+        padding: 5px 10px !important;
+        white-space: normal !important; 
+    }
+
+    .related-products .row {
+        flex-wrap: wrap;
+    }
+    .related-products .col {
+        border-right: none !important;
+        border-bottom: 1px solid #E6E6E6;
+    }
+
+    .newsletter-banner .row { 
+        text-align: center; 
+    }
+    .newsletter-banner .col-lg-2 { 
+        display: flex; 
+        justify-content: center; 
+    }
+}

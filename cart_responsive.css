@@ -1,99 +1,189 @@
 @media (max-width: 991px) {
     .header-middle, .navbar {
-        display: none !important;
+         display: none !important; 
+        }
+    .top-bar .d-lg-flex { 
+        display: none !important; 
     }
-    
-    .top-bar .d-lg-flex {
-        display: none !important;
+    .top-bar .container { 
+        justify-content: center !important; 
     }
-    
-    .top-bar .container {
-        justify-content: center !important;
-    }
-
-    #mobileMenu.offcanvas-start {
+    #mobileMenu.offcanvas-start { 
         width: 75vw !important;
+     }
+    .newsletter-banner .row { 
+        text-align: center; 
     }
-
-    .newsletter-banner .row {
-        text-align: center;
-    }
-    .newsletter-banner .col-lg-2 {
-        display: flex;
+    .newsletter-banner .col-lg-2 { 
+        display: flex; 
         justify-content: center;
-    }
+     }
 
-    .cart-table-responsive table {
-        min-width: 100% !important;
-        border: none !important;
-    }
-
-    .cart-table-responsive thead {
-        display: none !important;
-    }
-
-    .cart-table-responsive tbody,
-    .cart-table-responsive tfoot {
-        display: block;
-        width: 100%;
-    }
+    /* ============================================== */
+    /* 2. TABLE TO CARD TRANSFORMATION  */
+    /* ============================================== */
+    
+    .cart-table-responsive table { min-width: 100% !important; border: none !important; }
+    .cart-table-responsive thead { display: none !important; }
+    .cart-table-responsive tbody, .cart-table-responsive tfoot { display: block; width: 100%; }
 
     #cart-container > tr {
+        position: relative; 
         display: flex;
         flex-direction: column;
-        align-items: center;
         width: 100%;
         border: 1px solid #E6E6E6 !important;
         border-radius: 12px;
         margin-bottom: 1.5rem;
-        padding: 1.5rem 1rem;
+        padding: 2.5rem 1.5rem 1.5rem 1.5rem !important; 
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         background-color: #fff;
     }
 
-
     #cart-container > tr > td {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between !important; 
         align-items: center;
         width: 100% !important;
         border: none !important;
-        padding: 0.5rem 0 !important;
+        padding: 0.8rem 0 !important;
+        border-bottom: 1px solid #F2F2F2 !important;
     }
 
     #cart-container > tr > td:first-child {
-        justify-content: flex-start;
+        justify-content: center !important;
+        border-bottom: none !important;
+        padding-top: 0 !important;
     }
-    
-    #cart-container > tr > td:first-child table {
+    #cart-container > tr > td:first-child table,
+    #cart-container > tr > td:first-child table tr,
+    #cart-container > tr > td:first-child table td {
         display: flex;
+        flex-direction: column;
         align-items: center;
         width: 100%;
     }
+    #cart-container > tr > td:first-child table td.ps-3 {
+        padding-left: 0 !important;
+        margin-top: 10px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
 
+    #cart-container > tr > td:nth-child(2)::before { 
+        content: "Price:"; 
+        font-weight: 600; 
+        color: #1A1A1A; 
+    }
+    
+    #cart-container > tr > td:nth-child(3)::before { 
+        content: "Quantity:"; 
+        font-weight: 600; 
+        color: #1A1A1A; 
+        flex: 1; 
+    }
+    
+    #cart-container > tr > td:nth-child(4)::before { 
+        content: "Subtotal:"; 
+        font-weight: 600; 
+        color: #1A1A1A; }
+    #cart-container td span.fw-bold { 
+        font-size: 1.1rem; 
+    }
 
+    /* ---------------------------------------------- */
+    /* C. Quantity Adjuster Pill  */
+    /* ---------------------------------------------- */
     #cart-container td[align="center"] {
-        justify-content: center !important;
+        justify-content: space-between !important;
     }
-
-    #cart-container td span.fw-bold {
-        font-size: 1.1rem;
-    }
-
-    .cart-table-responsive tfoot td {
+    
+    #cart-container td[align="center"] table {
+        flex: 1; 
+        width: auto !important; 
+        margin: 0 auto !important; 
+        border: none !important; 
+        background: transparent !important;
         padding: 0 !important;
     }
+    
+
+    #cart-container td[align="center"]::after {
+        content: "";
+        flex: 1; 
+    }
+
+    #cart-container td[align="center"] table tr {
+        display: flex !important;
+        flex-direction: row !important; 
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 15px !important; 
+    }
+    
+    #cart-container td[align="center"] table td {
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    #cart-container > tr > td:last-child {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: auto !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    /* ============================================== */
+    /* 3. CART FOOTER BUTTONS & COUPON         */
+    /* ============================================== */
+    
+    .cart-table-responsive tfoot td { 
+        padding: 1rem 0 0 0 !important;
+     }
     .cart-table-responsive tfoot table tr {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: center; 
+        padding-bottom: 30px; 
+        width: 290%;
+        
     }
     .cart-table-responsive tfoot table td {
-        width: 100% !important;
-        text-align: center !important;
+        width: 60% !important;
+        display: flex;
+        justify-content: center;
+        
     }
     .cart-table-responsive tfoot a,
     .cart-table-responsive tfoot button {
-        width: 100%;
+        width: 100%; 
+        text-align: center;
+        padding: 14px !important;
+      
+    }
+    
+    .col-lg-8 .rounded-pill.bg-white {
+         border-radius: 12px !important; 
+        }
+    .col-lg-8 .rounded-pill.bg-white tr { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px; }
+    .col-lg-8 .rounded-pill.bg-white td { 
+        width: 100% !important; 
+        display: block; 
+        padding: 0 !important; }
+    .col-lg-8 .rounded-pill.bg-white input {
+        text-align: center;
+        padding: 14px !important;
+        background-color: #F7F7F7 !important; 
+        border-radius: 8px;
+    }
+    .col-lg-8 .rounded-pill.bg-white button {
+        border-radius: 8px !important;
+        padding: 14px !important;
+       
     }
 }

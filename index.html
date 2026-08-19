@@ -11,23 +11,30 @@
     <link rel="stylesheet" href="index_responsive.css">
 </head>
 <body class="bg-white">
+
+<!-- ============================================== -->
+    <!-- NEWSLETTER POPUP MODAL -->
+    <!-- ============================================== -->
     <div id="newsletter-modal" class="popup-overlay align-items-center justify-content-center">
-        <div class="bg-white rounded-4 shadow-lg position-relative d-flex p-2" style="max-width: 850px; width: 90%;">
-            <button class="btn border-0 position-absolute top-0 end-0 m-3 fs-5 z-3 text-muted shadow-none p-0" style="line-height: 1;" onclick="closePopup()">
+        <!-- Removed p-2 padding and added overflow-hidden so the image sits flush -->
+        <div class="bg-white rounded-4 shadow-lg position-relative overflow-hidden" style="max-width: 850px; width: 90%; min-height: 400px;">
+            
+            <button class="btn border-0 position-absolute top-0 end-0 m-3 fs-5 z-3 text-dark shadow-none p-0" style="line-height: 1;" onclick="closePopup()">
                 <i class="bi bi-x-lg"></i>
             </button>
-            
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td width="45%" align="left" valign="stretch">
-                        <img src="assets/popup-bg.jpg" class="img-fluid rounded-3 h-100" style="object-fit: cover;" alt="Newsletter">
+                    <td width="45%" align="left" valign="top" class="d-none d-lg-table-cell">
+                        <img src="assets/popup-bg.jpg" width="100%" height="100%" alt="Newsletter" style="object-fit: cover; min-height: 400px;">
                     </td>
-                    <td width="55%" align="center" valign="middle" class="p-5 text-center">
-                        <h2 class="fw-bold mb-3 text-dark display-6">Subcribe to Our<br>Newsletter</h2>
-                        <p class="text-muted font-sm mb-4 lh-lg">Subscribe to our newsletter and Save your <span class="text-warning fw-bold">20% money</span> with discount code today.</p>
-                        <div class="newsletter-capsule mb-4 mx-auto shadow-sm" style="max-width: 400px;">
+                    
+                    <td width="55%" align="center" valign="middle" class="p-5 text-center bg-white">
+                        <h2 class="fw-bold mb-3 text-dark display-6" style="font-size: 2.2rem;">Subcribe to Our<br>Newsletter</h2>
+                        <p class="text-muted font-sm mb-4 lh-lg px-3">Subscribe to our newsletter and Save your <span class="text-warning fw-bold">20% money</span> with discount code today.</p>
+                        
+                        <div class="newsletter-capsule mb-4 mx-auto shadow-sm" style="max-width: 380px;">
                             <input type="email" placeholder="Enter your email" class="text-muted font-sm">
-                            <button class="btn btn-success fw-bold px-4">Subscribe</button>
+                            <button class="btn btn-success fw-bold px-4 border-0 shadow-none">Subscribe</button>
                         </div>
                         
                         <label class="font-sm text-muted cursor-pointer d-flex align-items-center justify-content-center gap-2">
@@ -38,7 +45,6 @@
             </table>
         </div>
     </div>
-
 <!-- ============================================== -->
     <!-- TOP BAR -->
     <!-- ============================================== -->

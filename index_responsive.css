@@ -49,10 +49,9 @@
     .category-set .row {
         justify-content: center;
     }
-}
 
-/* ============================================== */
-    /* 5. NEWSLETTER POPUP MOBILE  */
+    /* ============================================== */
+    /* 5. NEWSLETTER POPUP MOBILE                     */
     /* ============================================== */
 
     #newsletter-modal table, 
@@ -62,9 +61,9 @@
         display: block;
         width: 100% !important;
     }
-    
+
     #newsletter-modal img[alt="Newsletter"] {
-        display: none; 
+        display: none !important; 
     }
     
     #newsletter-modal .p-5 {
@@ -73,15 +72,16 @@
     #newsletter-modal h2 {
         font-size: 1.8rem; 
     }
+}
 
-    .newsletter-capsule {
-        padding: 3px;
-    }
-    .newsletter-capsule input {
-        padding-left: 12px;
-        font-size: 0.9rem;
-    }
-    .newsletter-capsule button {
-        padding: 8px 20px;
-        font-size: 0.9rem;
-    }
+.newsletter-capsule {
+    padding: 3px;
+}
+.newsletter-capsule input {
+    padding-left: 12px;
+    font-size: 0.9rem;
+}
+.newsletter-capsule button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}

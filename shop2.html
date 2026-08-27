@@ -236,21 +236,24 @@
     <section class="shop2-section pb-5 bg-white">
         <div class="container">
             
-            <!-- Banner with Live Timer -->
+ <!-- Banner with Live Timer (jQuery Plugin Target) -->
             <div class="sale-month-banner rounded position-relative mb-4 d-flex align-items-center p-5 shadow-sm">
                 <div class="position-relative z-2 w-50 pe-4 ps-2">
                     <p class="text-white text-uppercase font-sm fw-semibold letter-spacing-1 mb-2">Best Deals</p>
                     <h2 class="display-5 fw-bold text-white mb-4">Sale of the Month</h2>
                     
-                    <table border="0" cellpadding="0" cellspacing="0" class="text-white mb-4 text-center">
+                    <!-- DYNAMIC JQUERY COUNTDOWN TARGET -->
+                    <!-- We give it an ID of 'jquery-countdown' and set a future date data attribute -->
+                    <table border="0" cellpadding="0" cellspacing="0" class="text-white mb-4 text-center" id="jquery-countdown" data-date="2026/08/30 23:59:59">
                         <tr>
-                            <td width="50"><h3 class="fw-bold mb-0" id="sale-days">00</h3><span class="font-sm text-white-50 text-uppercase">Days</span></td>
+                            <!-- The plugin will inject numbers into the spans with specific classes -->
+                            <td width="50"><h3 class="fw-bold mb-0"><span class="days">00</span></h3><span class="font-sm text-white-50 text-uppercase">Days</span></td>
                             <td width="20"><h4 class="mb-3 text-white-50">:</h4></td>
-                            <td width="50"><h3 class="fw-bold mb-0" id="sale-hours">02</h3><span class="font-sm text-white-50 text-uppercase">Hours</span></td>
+                            <td width="50"><h3 class="fw-bold mb-0"><span class="hours">00</span></h3><span class="font-sm text-white-50 text-uppercase">Hours</span></td>
                             <td width="20"><h4 class="mb-3 text-white-50">:</h4></td>
-                            <td width="50"><h3 class="fw-bold mb-0" id="sale-mins">18</h3><span class="font-sm text-white-50 text-uppercase">Mins</span></td>
+                            <td width="50"><h3 class="fw-bold mb-0"><span class="minutes">00</span></h3><span class="font-sm text-white-50 text-uppercase">Mins</span></td>
                             <td width="20"><h4 class="mb-3 text-white-50">:</h4></td>
-                            <td width="50"><h3 class="fw-bold mb-0" id="sale-secs">46</h3><span class="font-sm text-white-50 text-uppercase">Secs</span></td>
+                            <td width="50"><h3 class="fw-bold mb-0"><span class="seconds">00</span></h3><span class="font-sm text-white-50 text-uppercase">Secs</span></td>
                         </tr>
                     </table>
 
@@ -758,7 +761,12 @@
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- Scripts -->    
+    <!-- jQuery Library  -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    
+    <!-- The Countdown Plugin Script (Hosted via CDN for ease of use, or link to a local file if you downloaded it) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="ecommerce_app.js"></script> 
     <script src="shop2_script.js"></script>

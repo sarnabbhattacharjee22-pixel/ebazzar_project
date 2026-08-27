@@ -1,4 +1,15 @@
+html, body {
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+}
+
 @media (max-width: 991px) {
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
     #mobileMenu.offcanvas-start {
         width: 75vw !important;
     }
@@ -38,6 +49,8 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        margin: 0 !important;
+        width: 100% !important;
     }
 
     .product-card .p-4 {
@@ -46,6 +59,8 @@
     
     .newsletter-banner .row {
         text-align: center;
+        margin: 0 !important;
+        width: 100% !important;
     }
     .newsletter-banner .col-lg-2 {
         display: flex;

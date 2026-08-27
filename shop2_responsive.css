@@ -1,4 +1,15 @@
+html, body {
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+}
+
 @media (max-width: 991px) {
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
     .header-middle, .navbar.py-3.position-relative {
         display: none !important;
     }
@@ -18,6 +29,8 @@
     .sale-month-banner {
         padding: 2rem !important;
         background-position: left; 
+        width: 100% !important; 
+        box-sizing: border-box !important;
     }
     .sale-month-banner .w-50 {
         width: 100% !important; 
@@ -50,6 +63,8 @@
     #product-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin: 0 !important;
+        width: 100% !important;
     }
     .product-card .p-4 {
         padding: 1.5rem !important;
@@ -57,6 +72,8 @@
 
     .newsletter-banner .row {
         text-align: center;
+        margin: 0 !important;
+        width: 100% !important;
     }
     .newsletter-banner .col-lg-2 {
         display: flex;

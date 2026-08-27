@@ -6,21 +6,35 @@ function toggleFilter(contentId, headerElement) {
     icon.classList.toggle('rotated');
 }
 
-// --- 2. CATEGORY BOLD SELECTION LOGIC ---
-document.addEventListener("DOMContentLoaded", () => {
-    const catRadios = document.querySelectorAll('input[name="cat"]');
-    catRadios.forEach(radio => {
-        radio.addEventListener('change', (e) => {
-            catRadios.forEach(r => {
-                r.parentElement.classList.remove('text-dark', 'fw-medium');
-                r.parentElement.classList.add('text-muted');
-            });
-            if (e.target.checked) {
-                e.target.parentElement.classList.add('text-dark', 'fw-medium');
-                e.target.parentElement.classList.remove('text-muted');
+// --- 2. CATEGORY BOLD SELECTION & MIXITUP LOGIC ---
+$(document).ready(function() {
+    if ($('#product-grid').length) {
+        var mixer = mixitup('#product-grid', {
+            load: {
+                filter: '.vegetables' 
+            },
+            animation: {
+                duration: 300,
+                effects: 'fade scale(0.5)'
             }
         });
-    });
+
+        const catRadios = document.querySelectorAll('input[name="cat"]');
+        catRadios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                catRadios.forEach(r => {
+                    r.parentElement.classList.remove('text-dark', 'fw-medium');
+                    r.parentElement.classList.add('text-muted');
+                });
+                
+                if (e.target.checked) {
+                    e.target.parentElement.classList.add('text-dark', 'fw-medium');
+                    e.target.parentElement.classList.remove('text-muted');
+                    mixer.filter(e.target.value);
+                }
+            });
+        });
+    }
 });
 
 // --- 3. PRICE SLIDER LOGIC ---

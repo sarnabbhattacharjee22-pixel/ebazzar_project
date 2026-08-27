@@ -1,7 +1,3 @@
-/* ============================================== */
-/* GLOBAL MOBILE OVERFLOW LOCK                    */
-/* ============================================== */
-/* This strictly prevents the screen from moving side-to-side on mobile devices */
 html, body {
     overflow-x: hidden !important;
     width: 100vw !important;
@@ -58,11 +54,10 @@ html, body {
 
     .category-set .row {
         justify-content: center;
-        margin: 0 !important; /* Prevents rows from pushing past screen edge */
+        margin: 0 !important; 
         width: 100% !important;
     }
 
-    /* Prevent the container from overflowing its parent */
     .container {
         max-width: 100% !important;
         overflow-x: hidden !important;
